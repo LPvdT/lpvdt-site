@@ -26,7 +26,7 @@ Visit the live site: [Your GitHub Pages URL]
 
 ## 📁 Project Structure
 
-```
+```text
 src/
 ├── lib/
 │   └── components/
@@ -75,14 +75,14 @@ Edit the `personalInfo` object in `src/routes/+page.svelte`:
 
 ```javascript
 const personalInfo = {
- name: 'Your Name',
- title: 'Your Professional Title',
- email: 'your.email@example.com',
- phone: '+1 234 567 8900',
- location: 'Your City, Country',
- linkedin: 'https://linkedin.com/in/yourprofile',
- github: 'https://github.com/yourusername',
- website: 'https://yourwebsite.com'
+  name: 'Your Name',
+  title: 'Your Professional Title',
+  email: 'your.email@example.com',
+  phone: '+1 234 567 8900',
+  location: 'Your City, Country',
+  linkedin: 'https://linkedin.com/in/yourprofile',
+  github: 'https://github.com/yourusername',
+  website: 'https://yourwebsite.com'
 };
 ```
 
@@ -92,11 +92,11 @@ Update the `skills` object with your technologies and proficiency levels:
 
 ```javascript
 const skills = {
- programming: [
-  { name: 'Your Skill', level: 'expert' } // levels: beginner, intermediate, advanced, expert
-  // Add more skills...
- ]
- // Update other categories...
+  programming: [
+    { name: 'Your Skill', level: 'expert' } // levels: beginner, intermediate, advanced, expert
+    // Add more skills...
+  ]
+  // Update other categories...
 };
 ```
 
@@ -106,14 +106,14 @@ Modify the `experiences` array:
 
 ```javascript
 const experiences = [
- {
-  title: 'Your Job Title',
-  company: 'Company Name',
-  period: 'Start Date - End Date',
-  description: 'Your role description and achievements...',
-  technologies: ['Tech1', 'Tech2', 'Tech3']
- }
- // Add more experiences...
+  {
+    title: 'Your Job Title',
+    company: 'Company Name',
+    period: 'Start Date - End Date',
+    description: 'Your role description and achievements...',
+    technologies: ['Tech1', 'Tech2', 'Tech3']
+  }
+  // Add more experiences...
 ];
 ```
 
