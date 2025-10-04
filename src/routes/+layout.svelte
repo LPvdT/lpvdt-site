@@ -52,7 +52,7 @@
 <div class="bg-primary text-primary transition-theme min-h-screen">
 	<!-- Dark Mode Toggle -->
 	<button
-		class="theme-toggle fixed right-6 top-6 z-50 no-print"
+		class="theme-toggle fixed right-6 top-20 z-[60] no-print"
 		onclick={toggleTheme}
 		aria-label="Toggle dark mode"
 		title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}

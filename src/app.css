@@ -478,6 +478,8 @@ p {
 	color: rgb(var(--color-text-secondary));
 	cursor: pointer;
 	transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+	backdrop-filter: blur(8px);
+	box-shadow: 0 2px 8px rgba(var(--color-shadow), 0.1);
 }
 
 .theme-toggle:hover {
@@ -501,6 +503,60 @@ p {
 
 .theme-toggle:hover .theme-icon {
 	transform: rotate(15deg) scale(1.1);
+}
+
+/* Hamburger menu styles */
+.hamburger-menu {
+	position: relative;
+	overflow: hidden;
+}
+
+.hamburger-menu:hover {
+	transform: scale(1.05);
+}
+
+.hamburger-menu:active {
+	transform: scale(0.95);
+}
+
+.hamburger-lines {
+	gap: 3px;
+}
+
+.hamburger-line {
+	transform-origin: center;
+}
+
+.hamburger-menu:hover .hamburger-line {
+	background-color: rgb(var(--color-text-primary));
+}
+
+/* Mobile menu animations */
+.mobile-menu {
+	transform-origin: top;
+	overflow: hidden;
+}
+
+/* Enhanced animation delays for staggered effect */
+.animate-delay-100 {
+	animation-delay: 0.1s;
+	opacity: 1;
+}
+.animate-delay-200 {
+	animation-delay: 0.2s;
+	opacity: 1;
+}
+.animate-delay-300 {
+	animation-delay: 0.3s;
+	opacity: 1;
+}
+.animate-delay-400 {
+	animation-delay: 0.4s;
+	opacity: 1;
+}
+.animate-delay-500 {
+	animation-delay: 0.5s;
+	opacity: 1;
 }
 
 /* Print styles */
