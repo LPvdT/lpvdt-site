@@ -1,0 +1,34 @@
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: saturday
+      time: '20:00'
+      timezone: Europe/Amsterdam
+    target-branch: main
+    pull-request-branch-name:
+      separator: /
+    commit-message:
+      include: scope
+      prefix: '[github-actions]'
+    labels: [dependencies, github-actions]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: sunday
+      time: '10:00'
+      timezone: Europe/Amsterdam
+    target-branch: main
+    pull-request-branch-name:
+      separator: /
+    commit-message:
+      include: scope
+      prefix: '[npm]'
+    labels: [dependencies, npm]
+    open-pull-requests-limit: 5
