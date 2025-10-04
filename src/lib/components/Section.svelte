@@ -16,7 +16,7 @@
 	class="animate-slide-in-up mb-12 opacity-0 {className}"
 	style="animation-delay: {animationDelay}ms"
 >
-	<h2 class="gradient-text mb-6 text-2xl font-bold text-gray-900">
+	<h2 class="gradient-text mb-6 text-2xl font-bold">
 		{title}
 	</h2>
 	<div class="space-y-4">

@@ -21,7 +21,7 @@
 </script>
 
 <nav
-	class="bg-opacity-90 no-print fixed top-0 right-0 left-0 z-50 border-b border-gray-200 bg-white backdrop-blur-sm"
+	class="navbar-bg no-print fixed top-0 right-0 left-0 z-50 border-b border-primary backdrop-blur-sm transition-theme"
 >
 	<div class="mx-auto max-w-4xl px-6">
 		<div class="flex h-16 items-center justify-between">
@@ -32,7 +32,7 @@
 				{#each menuItems as item}
 					<button
 						onclick={() => scrollToSection(item.href)}
-						class="font-medium text-gray-600 transition-colors hover:text-gray-900"
+						class="font-medium text-secondary transition-all duration-300 hover:text-primary hover:scale-105"
 					>
 						{item.label}
 					</button>
@@ -42,7 +42,7 @@
 			<!-- Mobile Menu Button -->
 			<button
 				onclick={() => (isMenuOpen = !isMenuOpen)}
-				class="rounded-md p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 md:hidden"
+				class="rounded-md p-2 text-secondary hover:bg-tertiary hover:text-primary transition-all duration-300 md:hidden"
 			>
 				{#if isMenuOpen}
 					<X size={24} />
@@ -54,12 +54,12 @@
 
 		<!-- Mobile Menu -->
 		{#if isMenuOpen}
-			<div class="border-t border-gray-200 bg-white py-4 md:hidden">
+			<div class="border-t border-primary bg-secondary py-4 md:hidden transition-theme">
 				<div class="space-y-2">
 					{#each menuItems as item}
 						<button
 							onclick={() => scrollToSection(item.href)}
-							class="block w-full px-4 py-2 text-left font-medium text-gray-600 transition-colors hover:bg-gray-50 hover:text-gray-900"
+							class="block w-full px-4 py-2 text-left font-medium text-secondary transition-all duration-300 hover:bg-tertiary hover:text-primary"
 						>
 							{item.label}
 						</button>
