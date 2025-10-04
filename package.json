@@ -7,7 +7,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"deploy": "touch build/.nojekyll && npx gh-pages -d build -t true",
+		"deploy": "touch build/.nojekyll && pnpx gh-pages -d build -t true",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
@@ -16,7 +16,7 @@
 		"lint:fix": "eslint . --fix",
 		"type-check": "svelte-check --tsconfig ./tsconfig.json",
 		"test:unit": "vitest",
-		"test": "npm run test:unit -- --run",
+		"test": "pnpm run test:unit -- --run",
 		"pre-commit": "lint-staged",
 		"update-cv": "./scripts/update-cv.sh"
 	},
