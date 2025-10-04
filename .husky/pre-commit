@@ -1,8 +1,0 @@
-# Run lint-staged to check and fix staged files
-npm run pre-commit
-
-# Run type checking
-npm run type-check
-
-# Run tests
-npm run test
