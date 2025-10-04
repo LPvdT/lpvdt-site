@@ -26,7 +26,7 @@ Visit the live site: [Your GitHub Pages URL]
 
 ## 📁 Project Structure
 
-```
+```text
 src/
 ├── lib/
 │   └── components/
