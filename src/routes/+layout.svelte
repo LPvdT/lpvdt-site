@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import Navigation from '$lib/components/Navigation.svelte';
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 	import { Sun, Moon } from 'lucide-svelte';
@@ -50,19 +51,6 @@
 </svelte:head>
 
 <div class="bg-primary text-primary transition-theme min-h-screen">
-	<!-- Dark Mode Toggle -->
-	<button
-		class="theme-toggle fixed right-6 top-20 z-[60] no-print"
-		onclick={toggleTheme}
-		aria-label="Toggle dark mode"
-		title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-	>
-		{#if isDark}
-			<Sun size={20} class="theme-icon" />
-		{:else}
-			<Moon size={20} class="theme-icon" />
-		{/if}
-	</button>
-
+	<Navigation bind:isDark={isDark} {toggleTheme} />
 	{@render children?.()}
 </div>

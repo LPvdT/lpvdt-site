@@ -470,8 +470,8 @@ p {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 2.5rem;
-	height: 2.5rem;
+	width: 2.25rem;
+	height: 2.25rem;
 	border-radius: 50%;
 	background-color: rgb(var(--color-bg-secondary));
 	border: 1px solid rgb(var(--color-border));

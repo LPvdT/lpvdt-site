@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { Menu, X } from 'lucide-svelte';
+	import { Menu, X, Sun, Moon } from 'lucide-svelte';
 	import { onMount } from 'svelte';
+
+	let { isDark = $bindable(), toggleTheme }: { isDark: boolean, toggleTheme: () => void } = $props();
 
 	let isMenuOpen = $state(false);
 	let navElement: HTMLElement;
@@ -51,30 +53,46 @@
 		<div class="flex h-16 items-center justify-between">
 			<div class="gradient-text text-xl font-bold">LvdT</div>
 
-			<!-- Desktop Menu -->
-			<div class="hidden space-x-8 md:flex">
-				{#each menuItems as item}
-					<button
-						onclick={() => scrollToSection(item.href)}
-						class="font-medium text-secondary transition-all duration-300 hover:text-primary hover:scale-105"
-					>
-						{item.label}
-					</button>
-				{/each}
-			</div>
-
-			<!-- Mobile Menu Button -->
-			<button
-				onclick={() => (isMenuOpen = !isMenuOpen)}
-				class="hamburger-menu rounded-md p-2 text-secondary hover:bg-tertiary hover:text-primary transition-all duration-300 md:hidden relative"
-				aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-			>
-				<div class="hamburger-lines w-6 h-6 relative flex flex-col justify-center items-center">
-					<span class="hamburger-line block w-5 h-0.5 bg-current transition-all duration-300 {isMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-1.5'}"></span>
-					<span class="hamburger-line block w-5 h-0.5 bg-current transition-all duration-300 {isMenuOpen ? 'opacity-0' : 'opacity-100'}"></span>
-					<span class="hamburger-line block w-5 h-0.5 bg-current transition-all duration-300 {isMenuOpen ? '-rotate-45 -translate-y-2' : 'translate-y-1.5'}"></span>
+			<div class="flex items-center space-x-4">
+				<!-- Desktop Menu -->
+				<div class="hidden space-x-8 md:flex">
+					{#each menuItems as item}
+						<button
+							onclick={() => scrollToSection(item.href)}
+							class="font-medium text-secondary transition-all duration-300 hover:text-primary hover:scale-105"
+						>
+							{item.label}
+						</button>
+					{/each}
 				</div>
-			</button>
+
+				<!-- Theme Toggle -->
+				<button
+					class="theme-toggle"
+					onclick={toggleTheme}
+					aria-label="Toggle dark mode"
+					title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+				>
+					{#if isDark}
+						<Sun size={18} class="theme-icon" />
+					{:else}
+						<Moon size={18} class="theme-icon" />
+					{/if}
+				</button>
+
+				<!-- Mobile Menu Button -->
+				<button
+					onclick={() => (isMenuOpen = !isMenuOpen)}
+					class="hamburger-menu rounded-md p-2 text-secondary hover:bg-tertiary hover:text-primary transition-all duration-300 md:hidden relative"
+					aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+				>
+					<div class="hamburger-lines w-6 h-6 relative flex flex-col justify-center items-center">
+						<span class="hamburger-line block w-5 h-0.5 bg-current transition-all duration-300 {isMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-1.5'}"></span>
+						<span class="hamburger-line block w-5 h-0.5 bg-current transition-all duration-300 {isMenuOpen ? 'opacity-0' : 'opacity-100'}"></span>
+						<span class="hamburger-line block w-5 h-0.5 bg-current transition-all duration-300 {isMenuOpen ? '-rotate-45 -translate-y-2' : 'translate-y-1.5'}"></span>
+					</div>
+				</button>
+			</div>
 		</div>
 
 		<!-- Mobile Menu -->

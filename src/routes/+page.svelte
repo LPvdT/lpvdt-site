@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Download, Mail, MapPin, Phone, ExternalLink, Globe } from 'lucide-svelte';
-	import Navigation from '$lib/components/Navigation.svelte';
 	import Section from '$lib/components/Section.svelte';
 	import SkillTag from '$lib/components/SkillTag.svelte';
 	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
@@ -160,7 +159,6 @@
 </svelte:head>
 
 <main class="min-h-screen">
-	<Navigation />
 
 	<!-- Hero Section -->
 	<section class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 text-white">
