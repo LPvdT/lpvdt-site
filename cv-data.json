@@ -1,0 +1,126 @@
+{
+	"personal_info": {
+		"name": "Laurens van der Tas",
+		"title": "Senior Cloud Data Platform \\& MLOps Engineer",
+		"location": "Rotterdam, South Holland, Netherlands",
+		"email": "laurens.vandertas@gmail.com",
+		"website": "https://lpvdt.github.io",
+		"linkedin": "https://linkedin.com/in/lpvdt",
+		"github": "https://github.com/LPvdT"
+	},
+	"profile": "Senior Data Platform \\& MLOps Engineer with a track record of building data systems from the ground up and guiding them into fully automated, production-grade platforms. My career began at the intersection of econometrics and software engineering as a freelance developer, progressed into data science and advanced analytics, and has since evolved into leading machine learning and MLOps initiatives at scale. I bring a unique blend of engineering craftsmanship and quantitative expertise, backed by an MSc with a solid econometric background. Whether designing architectures, operationalizing ML, or mentoring teams, I focus on turning complex data problems into solutions that deliver long-term value. Academic excellence (both theses graded 9/10) underscores a commitment to precision, while open-source contributions and continuous learning reflect my drive to stay ahead in a rapidly changing field. % Experience \\newpage",
+	"experience": [
+		{
+			"title": "Senior Cloud Data Platform \\& MLOps Engineer",
+			"company": "DELTA Fiber",
+			"location": "Schiedam, Netherlands",
+			"period": "Sep 2024 -- Present",
+			"description": "Shaping the company's cloud-native data platform as a lead engineer and principal driver of its strategy, embedding modern MLOps practices to ensure scalability, reliability, and long-term value. Operating at the intersection of infrastructure, data engineering, and applied machine learning, I guide teams and stakeholders toward automated, production-ready solutions that deliver tangible impact across the organization. \\vspace{0.75em} \\begin{itemize}\\itemsep0.2em \\item Spearheaded the evolution of enterprise-wide data solutions, among which streaming solutions, increasing analytical efficiency and reducing deployment friction. \\item Architected and maintained AI-enabled systems, including ML models, APIs, and end-to-end data pipelines, ensuring robustness and operational reliability. \\item Implemented MLOps best practices: continuous integration/deployment for ML models, monitoring, alerting, and model lifecycle management to guarantee production stability. \\item Led development of scalable scrapers, crawlers, and interactive visualization platforms, expanding data accessibility and enabling faster, data-driven decision-making. \\end{itemize}} • Spearheaded the evolution of enterprise-wide data solutions, among which streaming solutions, increasing analytical efficiency and reducing deployment friction. • Architected and maintained AI-enabled systems, including ML models, APIs, and end-to-end data pipelines, ensuring robustness and operational reliability. • Implemented MLOps best practices: continuous • Led development of scalable scrapers, crawlers, and interactive visualization platforms, expanding data accessibility and enabling faster, data-driven decision-making.",
+			"technologies": ["R", "Machine Learning", "MLOps", "Scala"]
+		},
+		{
+			"title": "Senior Machine Learning Engineer",
+			"company": "DELTA Fiber",
+			"location": "Schiedam, Netherlands",
+			"period": "Nov 2021 -- Aug 2024",
+			"description": "Took ownership of the company's machine learning stack, ensuring models were not just experimental prototypes but reliable, monitored, and continuously improving production assets. Collaborated with business units to deliver insights and predictive capabilities that shaped strategic decision-making. \\vspace{0.75em} \\begin{itemize}\\itemsep0.2em \\item Led integration of machine learning models into production systems. \\item Built and maintained scalable pipelines and automated workflows. \\item Supported data-driven decision-making with advanced analytics and visualizations. \\end{itemize}} • Led integration of machine learning models into production systems. • Built and maintained scalable pipelines and automated workflows. • Supported data-driven decision-making with advanced analytics and visualizations.",
+			"technologies": ["R", "Machine Learning", "Scala"]
+		},
+		{
+			"title": "Data Scientist/Engineer",
+			"company": "DELTA Fiber",
+			"location": "Schiedam, Netherlands",
+			"period": "Nov 2018 -- Oct 2021",
+			"description": "Pioneered the company's advanced analytics journey by establishing its first modern data infrastructure and operational machine learning pipelines. Balanced the dual role of data scientist and engineer, laying the groundwork for scalable platforms that later became critical to the business. \\vspace{0.75em} \\begin{itemize}\\itemsep0.2em \\item Designed and deployed the first company-wide data warehouse and ETL processes. \\item Delivered initial advanced analytics solutions, including predictive models and automated APIs. \\item Established CI/CD practices for data science and engineering workflows. \\item Created scrapers, crawlers, and BI dashboards to improve operational visibility. \\end{itemize}} • Designed and deployed the first company-wide data warehouse and ETL processes. • Delivered initial advanced analytics solutions, including • Established CI/CD practices for data science and engineering workflows. • Created scrapers, crawlers, and BI dashboards to improve",
+			"technologies": ["Scala", "Machine Learning", "R", "CI/CD", "ETL"]
+		},
+		{
+			"title": "Freelance Developer",
+			"company": "Private Clients",
+			"location": "Apeldoorn, Netherlands",
+			"period": "Sep 2012 -- Aug 2018",
+			"description": "Independent developer combining econometric modelling with full-stack web solutions for a variety of clients. This role honed my ability to translate mathematical concepts into practical applications and gave me hands-on experience with diverse stacks, architectures, and deployment strategies. \\vspace{0.75em} \\begin{itemize}\\itemsep0.2em \\item Built and deployed full-stack web applications and APIs across multiple frameworks. \\item Developed econometric modelling solutions to support research and business cases. \\item Applied statistical modelling and data analysis in client-focused projects. \\item Gained experience with distributed systems, containerization, and automation before moving into large-scale enterprise environments. \\end{itemize}} \\vspace{0.75em} • Built and deployed full-stack web applications and APIs across multiple frameworks. • Developed econometric modelling solutions to support research and business cases. • Applied statistical modelling and data analysis in client-focused projects. • Gained experience with distributed systems, containerization, and automation before moving into large-scale enterprise",
+			"technologies": ["R"]
+		},
+		{
+			"title": "Commercial Insurance Agent",
+			"company": "Achmea",
+			"location": "Apeldoorn, Netherlands",
+			"period": "2010 -- 2011",
+			"description": "\\begin{itemize} \\item Worked in sales and advisory for commercial insurance products. \\end{itemize}} % Skills \\newpage • Worked in sales and advisory for commercial insurance products.",
+			"technologies": ["R"]
+		}
+	],
+	"skills": {
+		"programming": [],
+		"data_engineering": [],
+		"cloud_devops": [],
+		"analytics": [],
+		"visualization": [],
+		"other": []
+	},
+	"education": [
+		{
+			"degree": "MSc Banking \\& Finance",
+			"institution": "Utrecht University",
+			"location": "Utrecht, Netherlands",
+			"period": "2016 -- 2018",
+			"description": "Focus on quantitative finance, econometrics, and investment management. Thesis on machine learning"
+		},
+		{
+			"degree": "BSc Economics \\& Business Economics",
+			"institution": "Utrecht University",
+			"location": "Utrecht, Netherlands",
+			"period": "2012 -- 2015",
+			"description": "Customized programme emphasizing econometrics, statistics, and finance. Thesis graded"
+		},
+		{
+			"degree": "International Business and Management Studies",
+			"institution": "Avans University of Applied Sciences",
+			"location": "Breda, Netherlands",
+			"period": "2011",
+			"description": "Propaedeutic obtained"
+		},
+		{
+			"degree": "Pre-University Education (VWO)",
+			"institution": "Edison College",
+			"location": "Apeldoorn, Netherlands",
+			"period": "2004 -- 2010",
+			"description": "Science"
+		}
+	],
+	"certifications": [
+		{
+			"name": "Dagster \\& dbt",
+			"issuer": "Dagster Labs",
+			"year": "2024",
+			"description": "\\textit{Dagster Essentials, Dagster \\& dbt integration"
+		},
+		{
+			"name": "NestJS Fundamentals \\& Authentication",
+			"issuer": "NestJS",
+			"year": "2023",
+			"description": ""
+		},
+		{
+			"name": "Applied Data Science (R \\& Python)",
+			"issuer": "DataCamp",
+			"year": "2017",
+			"description": "\\textit{ARIMA Modelling, Intermediate R \\& Python, Time Series with xts \\& zoo"
+		}
+	],
+	"projects": [
+		{
+			"name": "MLOps Platform",
+			"description": "Built comprehensive MLOps platform with automated model deployment, monitoring, and lifecycle management using Databricks, MLflow, and Kubernetes.",
+			"technologies": ["Python", "Databricks", "MLflow", "Kubernetes", "Docker"],
+			"link": "https://github.com/LPvdT"
+		},
+		{
+			"name": "Real-time Data Platform",
+			"description": "Designed and implemented real-time streaming data platform handling millions of events daily using Kafka, Flink, and modern data lakehouse architecture.",
+			"technologies": ["Kafka", "Flink", "Python", "Terraform", "Azure"],
+			"link": "https://github.com/LPvdT"
+		}
+	]
+}
