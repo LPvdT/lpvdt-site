@@ -21,7 +21,7 @@ updates:
     directory: /
     schedule:
       interval: cron
-      cronjob: '30 6 * * 6/3'
+      cronjob: 30 6 * * 6/3
       timezone: Europe/Amsterdam
     target-branch: main
     pull-request-branch-name:
