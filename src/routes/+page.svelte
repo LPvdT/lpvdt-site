@@ -1,4 +1,5 @@
 <script lang="ts">
+  // TODO: Check all content in development
   import { Download, Mail, MapPin, ExternalLink, Globe } from 'lucide-svelte';
   import Section from '$lib/components/Section.svelte';
   import SkillTag from '$lib/components/SkillTag.svelte';
@@ -87,6 +88,7 @@
       period: 'Sep 2024 -- Present',
       description:
         'Leading the design and implementation of enterprise-scale cloud-native data platforms and MLOps solutions. Driving digital transformation through automated, production-ready machine learning systems that deliver measurable business impact.',
+      // TODO: Add more technologies
       technologies: [
         'Python',
         'Databricks',
@@ -105,6 +107,7 @@
       period: 'Nov 2021 -- Aug 2024',
       description:
         'Owned end-to-end machine learning lifecycle from research to production deployment. Built scalable ML infrastructure and established best practices for model monitoring, versioning, and continuous integration.',
+      // TODO: Add more technologies
       technologies: [
         'Python',
         'TensorFlow',
@@ -121,6 +124,7 @@
       period: 'Nov 2018 -- Oct 2021',
       description:
         "Pioneered the company's data-driven transformation by building the foundational data infrastructure and implementing the first production ML pipelines. Established modern data engineering practices and CI/CD workflows.",
+      // TODO: Add more technologies
       technologies: ['Python', 'R', 'SQL', 'Azure', 'Databricks', 'Power BI', 'Docker'],
     },
     {
@@ -129,6 +133,7 @@
       period: 'Sep 2012 -- Aug 2018',
       description:
         'Delivered full-stack web applications and econometric modeling solutions for diverse clients. Specialized in translating complex mathematical concepts into practical software solutions.',
+      // TODO: Add more technologies
       technologies: ['Python', 'R', 'JavaScript', 'SQL', 'Docker', 'Linux'],
     },
     {
@@ -137,6 +142,7 @@
       period: '2010 -- 2011',
       description:
         'Provided sales and advisory services for commercial insurance products, developing strong client relationship and communication skills.',
+      // TODO: Add more technologies
       technologies: [],
     },
   ];
@@ -147,30 +153,31 @@
       institution: 'Utrecht University',
       period: '2016 -- 2018',
       description:
-        'Focus on quantitative finance, econometrics, and investment management. Thesis on machine learning',
+        'Focus on quantitative finance, econometrics, and investment management. Thesis on machine learning (graded 9/10).',
     },
     {
       degree: 'BSc Economics & Business Economics',
       institution: 'Utrecht University',
       period: '2012 -- 2015',
       description:
-        'Customized programme emphasizing econometrics, statistics, and finance. Thesis graded',
+        'Customized programme emphasizing econometrics, statistics, and finance. Thesis graded 9/10.',
     },
     {
       degree: 'International Business and Management Studies',
       institution: 'Avans University of Applied Sciences',
       period: '2011',
-      description: 'Propaedeutic obtained',
+      description: 'Propaedeutic obtained (in half a year).',
     },
     {
       degree: 'Pre-University Education (VWO)',
       institution: 'Edison College',
       period: '2004 -- 2010',
-      description: 'Science',
+      description: 'Science & Technology Profile.',
     },
   ];
 
   const projects = [
+    // TODO: Change this to some GH repos
     {
       name: 'MLOps Platform',
       description:
@@ -248,6 +255,7 @@
         </div>
 
         <div class="animate-fade-in animate-delay-600 flex justify-center gap-4 opacity-0">
+          <!-- TODO: Update ExternalLink icon to something better -->
           <a
             href={personalInfo.linkedin}
             target="_blank"
