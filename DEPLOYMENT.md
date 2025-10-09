@@ -23,12 +23,12 @@ Your site will be available at: `https://yourusername.github.io/repository-name`
 
 ## Customization Checklist
 
-- [ ] Update personal information in `src/routes/+page.svelte`
-- [ ] Replace `static/Laurens-van-der-Tas-CV.pdf` with your CV
-- [ ] Customize skills and experience sections
-- [ ] Update colors/theme if desired
-- [ ] Test on mobile devices
-- [ ] Update README with your information
+- [x] Update personal information in `src/routes/+page.svelte`
+- [x] Replace `static/Laurens-van-der-Tas-CV.pdf` with your CV
+- [x] Customize skills and experience sections
+- [x] Update colors/theme if desired
+- [x] Test on mobile devices
+- [x] Update README with your information
 
 ## Custom Domain (Optional)
 
