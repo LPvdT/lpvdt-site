@@ -86,8 +86,31 @@
       title: 'Senior Cloud Data Platform & MLOps Engineer',
       company: 'DELTA Fiber',
       period: 'Sep 2024 -- Present',
-      description:
-        'Leading the design and implementation of enterprise-scale cloud-native data platforms and MLOps solutions. Driving digital transformation through automated, production-ready machine learning systems that deliver measurable business impact.',
+      // TODO: Fix HTML rendering
+      description: `Shaping the company's cloud-native data platform as a lead engineer and
+        principal driver of its strategy, embedding modern MLOps practices to ensure
+        scalability, reliability, and long-term value.
+        Operating at the intersection
+        of infrastructure, data engineering, and applied machine learning, I guide
+        teams and stakeholders toward automated, production-ready solutions that
+        deliver tangible impact across the organization.
+
+        - Spearheaded the evolution of enterprise-wide data solutions, among
+        which streaming solutions, increasing analytical efficiency and reducing
+        deployment friction.
+
+        - Architected and maintained AI-enabled systems, including ML models,
+        APIs, and end-to-end data pipelines, ensuring robustness and operational
+        reliability.
+
+        - Implemented MLOps best practices: continuous integration/deployment
+        for ML models, monitoring, alerting, and model lifecycle management to
+        guarantee production stability.
+
+        - Led development of scalable scrapers, crawlers, and interactive
+        visualization platforms, expanding data accessibility and enabling faster,
+        data-driven decision-making.
+  `,
       // TODO: Add more technologies
       technologies: [
         'Python',
@@ -105,8 +128,9 @@
       title: 'Senior Machine Learning Engineer',
       company: 'DELTA Fiber',
       period: 'Nov 2021 -- Aug 2024',
+      // TODO: Fix HTML rendering
       description:
-        'Owned end-to-end machine learning lifecycle from research to production deployment. Built scalable ML infrastructure and established best practices for model monitoring, versioning, and continuous integration.',
+        "Shaping the company's cloud-native data platform as a lead engineer and principal driver of its strategy, embedding modern MLOps practices to ensure scalability, reliability, and long-term value. Operating at the intersection of infrastructure, data engineering, and applied machine learning, I guide teams and stakeholders toward automated, production-ready solutions that deliver tangible impact across the organization.\n\n- Spearheaded the evolution of enterprise-wide data solutions, among which streaming solutions, increasing analytical efficiency and reducing deployment friction.\n- Architected and maintained AI-enabled systems, including ML models, APIs, and end-to-end data pipelines, ensuring robustness and operational reliability.\n- Implemented MLOps best practices: continuous integration/deployment for ML models, monitoring, alerting, and model lifecycle management to guarantee production stability.\n- Led development of scalable scrapers, crawlers, and interactive visualization platforms, expanding data accessibility and enabling faster, data-driven decision-making.",
       // TODO: Add more technologies
       technologies: [
         'Python',
@@ -122,8 +146,9 @@
       title: 'Data Scientist/Engineer',
       company: 'DELTA Fiber',
       period: 'Nov 2018 -- Oct 2021',
+      // TODO: Fix HTML rendering
       description:
-        "Pioneered the company's data-driven transformation by building the foundational data infrastructure and implementing the first production ML pipelines. Established modern data engineering practices and CI/CD workflows.",
+        "Pioneered the company's advanced analytics journey by establishing its first modern data infrastructure and operational machine learning pipelines. Balanced the dual role of data scientist and engineer, laying the foundation for scalable platforms that later became critical to the business.",
       // TODO: Add more technologies
       technologies: ['Python', 'R', 'SQL', 'Azure', 'Databricks', 'Power BI', 'Docker'],
     },
@@ -131,8 +156,9 @@
       title: 'Freelance Developer',
       company: 'Private Clients',
       period: 'Sep 2012 -- Aug 2018',
+      // TODO: Fix HTML rendering
       description:
-        'Delivered full-stack web applications and econometric modeling solutions for diverse clients. Specialized in translating complex mathematical concepts into practical software solutions.',
+        'Independent developer combining econometric modelling with full-stack web solutions for a variety of clients. This role honed my ability to translate mathematical concepts into practical applications and gave me hands-on experience with diverse stacks, architectures, and deployment strategies.',
       // TODO: Add more technologies
       technologies: ['Python', 'R', 'JavaScript', 'SQL', 'Docker', 'Linux'],
     },
@@ -140,6 +166,7 @@
       title: 'Commercial Insurance Agent',
       company: 'Achmea',
       period: '2010 -- 2011',
+      // TODO: Fix HTML rendering
       description:
         'Provided sales and advisory services for commercial insurance products, developing strong client relationship and communication skills.',
       // TODO: Add more technologies
