@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { ChevronUp } from 'lucide-svelte';
-  import { onMount } from 'svelte';
+  import { ChevronUp } from "lucide-svelte";
+  import { onMount } from "svelte";
 
   let showButton = $state(false);
 
@@ -9,17 +9,17 @@
       showButton = window.scrollY > 300;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   });
 
   function scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth"
     });
   }
 </script>

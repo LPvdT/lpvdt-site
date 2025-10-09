@@ -1,91 +1,91 @@
 <script lang="ts">
   // TODO: Check all content in development
-  import { Download, Mail, MapPin, ExternalLink, Globe } from 'lucide-svelte';
-  import Section from '$lib/components/Section.svelte';
-  import SkillTag from '$lib/components/SkillTag.svelte';
-  import ExperienceCard from '$lib/components/ExperienceCard.svelte';
-  import ScrollToTop from '$lib/components/ScrollToTop.svelte';
+  import { Download, Mail, MapPin, ExternalLink, Globe } from "lucide-svelte";
+  import Section from "$lib/components/Section.svelte";
+  import SkillTag from "$lib/components/SkillTag.svelte";
+  import ExperienceCard from "$lib/components/ExperienceCard.svelte";
+  import ScrollToTop from "$lib/components/ScrollToTop.svelte";
 
   const personalInfo = {
-    name: 'Laurens van der Tas',
-    title: 'Senior Cloud Data Platform & MLOps Engineer',
-    email: 'laurens.vandertas@gmail.com',
-    location: 'Rotterdam, South Holland, Netherlands',
-    linkedin: 'https://linkedin.com/in/lpvdt',
-    github: 'https://github.com/LPvdT',
-    website: 'https://lpvdt.github.io',
+    name: "Laurens van der Tas",
+    title: "Senior Cloud Data Platform & MLOps Engineer",
+    email: "laurens.vandertas@gmail.com",
+    location: "Rotterdam, South Holland, Netherlands",
+    linkedin: "https://linkedin.com/in/lpvdt",
+    github: "https://github.com/LPvdT",
+    website: "https://lpvdt.github.io"
   };
 
   const skills = {
     programming: [
-      { name: 'Python', level: 'expert' },
-      { name: 'R', level: 'advanced' },
-      { name: 'Rust', level: 'intermediate' },
-      { name: 'Scala', level: 'intermediate' },
-      { name: 'Go', level: 'intermediate' },
-      { name: 'TypeScript', level: 'advanced' },
-      { name: 'React', level: 'advanced' },
-      { name: 'Next.js', level: 'advanced' },
-      { name: 'NestJS', level: 'advanced' },
-      { name: 'Svelte', level: 'intermediate' },
-      { name: 'FastAPI', level: 'expert' },
-      { name: 'TensorFlow', level: 'advanced' },
-      { name: 'PyTorch', level: 'expert' },
-      { name: 'Bash', level: 'expert' },
+      { name: "Python", level: "expert" },
+      { name: "R", level: "advanced" },
+      { name: "Rust", level: "intermediate" },
+      { name: "Scala", level: "intermediate" },
+      { name: "Go", level: "intermediate" },
+      { name: "TypeScript", level: "advanced" },
+      { name: "React", level: "advanced" },
+      { name: "Next.js", level: "advanced" },
+      { name: "NestJS", level: "advanced" },
+      { name: "Svelte", level: "intermediate" },
+      { name: "FastAPI", level: "expert" },
+      { name: "TensorFlow", level: "advanced" },
+      { name: "PyTorch", level: "expert" },
+      { name: "Bash", level: "expert" }
     ],
     dataEngineering: [
-      { name: 'Databricks', level: 'expert' },
-      { name: 'MLflow', level: 'expert' },
-      { name: 'dbt', level: 'advanced' },
-      { name: 'Kafka', level: 'advanced' },
-      { name: 'Flink', level: 'intermediate' },
-      { name: 'PySpark', level: 'expert' },
-      { name: 'Polars', level: 'expert' },
-      { name: 'Databricks Workflows', level: 'expert' },
-      { name: 'Airflow', level: 'intermediate' },
-      { name: 'Dagster', level: 'advanced' },
-      { name: 'DuckDB', level: 'advanced' },
-      { name: 'ETL/ELT/CDC', level: 'expert' },
-      { name: 'Database & Data Lakehouse Design', level: 'expert' },
+      { name: "Databricks", level: "expert" },
+      { name: "MLflow", level: "expert" },
+      { name: "dbt", level: "advanced" },
+      { name: "Kafka", level: "advanced" },
+      { name: "Flink", level: "intermediate" },
+      { name: "PySpark", level: "expert" },
+      { name: "Polars", level: "expert" },
+      { name: "Databricks Workflows", level: "expert" },
+      { name: "Airflow", level: "intermediate" },
+      { name: "Dagster", level: "advanced" },
+      { name: "DuckDB", level: "advanced" },
+      { name: "ETL/ELT/CDC", level: "expert" },
+      { name: "Database & Data Lakehouse Design", level: "expert" }
     ],
     cloudDevOps: [
-      { name: 'Kubernetes', level: 'advanced' },
-      { name: 'Docker', level: 'expert' },
-      { name: 'Terraform', level: 'advanced' },
-      { name: 'Azure', level: 'expert' },
-      { name: 'AWS', level: 'advanced' },
-      { name: 'GCP', level: 'intermediate' },
-      { name: 'GitHub Actions', level: 'expert' },
-      { name: 'Azure Pipelines', level: 'expert' },
-      { name: 'Helm', level: 'intermediate' },
+      { name: "Kubernetes", level: "advanced" },
+      { name: "Docker", level: "expert" },
+      { name: "Terraform", level: "advanced" },
+      { name: "Azure", level: "expert" },
+      { name: "AWS", level: "advanced" },
+      { name: "GCP", level: "intermediate" },
+      { name: "GitHub Actions", level: "expert" },
+      { name: "Azure Pipelines", level: "expert" },
+      { name: "Helm", level: "intermediate" }
     ],
     advancedAnalytics: [
-      { name: 'Machine Learning (all algorithms)', level: 'expert' },
-      { name: 'Deep Learning', level: 'expert' },
-      { name: 'LLMs (fine-tuning, inference & deployment)', level: 'advanced' },
-      { name: 'MLOps', level: 'expert' },
-      { name: 'Econometric Modeling', level: 'expert' },
-      { name: 'Time Series Analysis', level: 'expert' },
-      { name: 'Reinforcement Learning', level: 'intermediate' },
+      { name: "Machine Learning (all algorithms)", level: "expert" },
+      { name: "Deep Learning", level: "expert" },
+      { name: "LLMs (fine-tuning, inference & deployment)", level: "advanced" },
+      { name: "MLOps", level: "expert" },
+      { name: "Econometric Modeling", level: "expert" },
+      { name: "Time Series Analysis", level: "expert" },
+      { name: "Reinforcement Learning", level: "intermediate" }
     ],
     tools: [
-      { name: 'Power BI', level: 'advanced' },
-      { name: 'Grafana', level: 'expert' },
-      { name: 'Tableau', level: 'advanced' },
-      { name: 'Plotly', level: 'advanced' },
-      { name: 'Stata', level: 'advanced' },
-      { name: 'Git', level: 'expert' },
-      { name: 'SQL/NoSQL', level: 'expert' },
-      { name: '*NIX', level: 'expert' },
-      { name: 'APIs (REST/GraphQL)', level: 'expert' },
-    ],
+      { name: "Power BI", level: "advanced" },
+      { name: "Grafana", level: "expert" },
+      { name: "Tableau", level: "advanced" },
+      { name: "Plotly", level: "advanced" },
+      { name: "Stata", level: "advanced" },
+      { name: "Git", level: "expert" },
+      { name: "SQL/NoSQL", level: "expert" },
+      { name: "*NIX", level: "expert" },
+      { name: "APIs (REST/GraphQL)", level: "expert" }
+    ]
   };
 
   const experiences = [
     {
-      title: 'Senior Cloud Data Platform & MLOps Engineer',
-      company: 'DELTA Fiber',
-      period: 'Sep 2024 -- Present',
+      title: "Senior Cloud Data Platform & MLOps Engineer",
+      company: "DELTA Fiber",
+      period: "Sep 2024 -- Present",
       // TODO: Fix HTML rendering
       description: `Shaping the company's cloud-native data platform as a lead engineer and
         principal driver of its strategy, embedding modern MLOps practices to ensure
@@ -113,112 +113,112 @@
   `,
       // TODO: Add more technologies
       technologies: [
-        'Python',
-        'Databricks',
-        'MLflow',
-        'Kubernetes',
-        'Docker',
-        'Terraform',
-        'Azure',
-        'Kafka',
-        'Airflow',
-      ],
+        "Python",
+        "Databricks",
+        "MLflow",
+        "Kubernetes",
+        "Docker",
+        "Terraform",
+        "Azure",
+        "Kafka",
+        "Airflow"
+      ]
     },
     {
-      title: 'Senior Machine Learning Engineer',
-      company: 'DELTA Fiber',
-      period: 'Nov 2021 -- Aug 2024',
+      title: "Senior Machine Learning Engineer",
+      company: "DELTA Fiber",
+      period: "Nov 2021 -- Aug 2024",
       // TODO: Fix HTML rendering
       description:
         "Shaping the company's cloud-native data platform as a lead engineer and principal driver of its strategy, embedding modern MLOps practices to ensure scalability, reliability, and long-term value. Operating at the intersection of infrastructure, data engineering, and applied machine learning, I guide teams and stakeholders toward automated, production-ready solutions that deliver tangible impact across the organization.\n\n- Spearheaded the evolution of enterprise-wide data solutions, among which streaming solutions, increasing analytical efficiency and reducing deployment friction.\n- Architected and maintained AI-enabled systems, including ML models, APIs, and end-to-end data pipelines, ensuring robustness and operational reliability.\n- Implemented MLOps best practices: continuous integration/deployment for ML models, monitoring, alerting, and model lifecycle management to guarantee production stability.\n- Led development of scalable scrapers, crawlers, and interactive visualization platforms, expanding data accessibility and enabling faster, data-driven decision-making.",
       // TODO: Add more technologies
       technologies: [
-        'Python',
-        'TensorFlow',
-        'PyTorch',
-        'MLflow',
-        'Kubernetes',
-        'Azure',
-        'Databricks',
-      ],
+        "Python",
+        "TensorFlow",
+        "PyTorch",
+        "MLflow",
+        "Kubernetes",
+        "Azure",
+        "Databricks"
+      ]
     },
     {
-      title: 'Data Scientist/Engineer',
-      company: 'DELTA Fiber',
-      period: 'Nov 2018 -- Oct 2021',
+      title: "Data Scientist/Engineer",
+      company: "DELTA Fiber",
+      period: "Nov 2018 -- Oct 2021",
       // TODO: Fix HTML rendering
       description:
         "Pioneered the company's advanced analytics journey by establishing its first modern data infrastructure and operational machine learning pipelines. Balanced the dual role of data scientist and engineer, laying the foundation for scalable platforms that later became critical to the business.",
       // TODO: Add more technologies
-      technologies: ['Python', 'R', 'SQL', 'Azure', 'Databricks', 'Power BI', 'Docker'],
+      technologies: ["Python", "R", "SQL", "Azure", "Databricks", "Power BI", "Docker"]
     },
     {
-      title: 'Freelance Developer',
-      company: 'Private Clients',
-      period: 'Sep 2012 -- Aug 2018',
+      title: "Freelance Developer",
+      company: "Private Clients",
+      period: "Sep 2012 -- Aug 2018",
       // TODO: Fix HTML rendering
       description:
-        'Independent developer combining econometric modelling with full-stack web solutions for a variety of clients. This role honed my ability to translate mathematical concepts into practical applications and gave me hands-on experience with diverse stacks, architectures, and deployment strategies.',
+        "Independent developer combining econometric modelling with full-stack web solutions for a variety of clients. This role honed my ability to translate mathematical concepts into practical applications and gave me hands-on experience with diverse stacks, architectures, and deployment strategies.",
       // TODO: Add more technologies
-      technologies: ['Python', 'R', 'JavaScript', 'SQL', 'Docker', 'Linux'],
+      technologies: ["Python", "R", "JavaScript", "SQL", "Docker", "Linux"]
     },
     {
-      title: 'Commercial Insurance Agent',
-      company: 'Achmea',
-      period: '2010 -- 2011',
+      title: "Commercial Insurance Agent",
+      company: "Achmea",
+      period: "2010 -- 2011",
       // TODO: Fix HTML rendering
       description:
-        'Provided sales and advisory services for commercial insurance products, developing strong client relationship and communication skills.',
+        "Provided sales and advisory services for commercial insurance products, developing strong client relationship and communication skills.",
       // TODO: Add more technologies
-      technologies: [],
-    },
+      technologies: []
+    }
   ];
 
   const education = [
     {
-      degree: 'MSc Banking & Finance',
-      institution: 'Utrecht University',
-      period: '2016 -- 2018',
+      degree: "MSc Banking & Finance",
+      institution: "Utrecht University",
+      period: "2016 -- 2018",
       description:
-        'Focus on quantitative finance, econometrics, and investment management. Thesis on machine learning (graded 9/10).',
+        "Focus on quantitative finance, econometrics, and investment management. Thesis on machine learning (graded 9/10)."
     },
     {
-      degree: 'BSc Economics & Business Economics',
-      institution: 'Utrecht University',
-      period: '2012 -- 2015',
+      degree: "BSc Economics & Business Economics",
+      institution: "Utrecht University",
+      period: "2012 -- 2015",
       description:
-        'Customized programme emphasizing econometrics, statistics, and finance. Thesis graded 9/10.',
+        "Customized programme emphasizing econometrics, statistics, and finance. Thesis graded 9/10."
     },
     {
-      degree: 'International Business and Management Studies',
-      institution: 'Avans University of Applied Sciences',
-      period: '2011',
-      description: 'Propaedeutic obtained (in half a year).',
+      degree: "International Business and Management Studies",
+      institution: "Avans University of Applied Sciences",
+      period: "2011",
+      description: "Propaedeutic obtained (in half a year)."
     },
     {
-      degree: 'Pre-University Education (VWO)',
-      institution: 'Edison College',
-      period: '2004 -- 2010',
-      description: 'Science & Technology Profile.',
-    },
+      degree: "Pre-University Education (VWO)",
+      institution: "Edison College",
+      period: "2004 -- 2010",
+      description: "Science & Technology Profile."
+    }
   ];
 
   const projects = [
     // TODO: Change this to some GH repos
     {
-      name: 'MLOps Platform',
+      name: "MLOps Platform",
       description:
-        'Built comprehensive MLOps platform with automated model deployment, monitoring, and lifecycle management using Databricks, MLflow, and Kubernetes.',
-      technologies: ['Python', 'Databricks', 'MLflow', 'Kubernetes', 'Docker'],
-      link: 'https://github.com/LPvdT',
+        "Built comprehensive MLOps platform with automated model deployment, monitoring, and lifecycle management using Databricks, MLflow, and Kubernetes.",
+      technologies: ["Python", "Databricks", "MLflow", "Kubernetes", "Docker"],
+      link: "https://github.com/LPvdT"
     },
     {
-      name: 'Real-time Data Platform',
+      name: "Real-time Data Platform",
       description:
-        'Designed and implemented real-time streaming data platform handling millions of events daily using Kafka, Flink, and modern data lakehouse architecture.',
-      technologies: ['Kafka', 'Flink', 'Python', 'Terraform', 'Azure'],
-      link: 'https://github.com/LPvdT',
-    },
+        "Designed and implemented real-time streaming data platform handling millions of events daily using Kafka, Flink, and modern data lakehouse architecture.",
+      technologies: ["Kafka", "Flink", "Python", "Terraform", "Azure"],
+      link: "https://github.com/LPvdT"
+    }
   ];
 </script>
 
@@ -233,7 +233,9 @@
   >
     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
     <div class="absolute inset-0">
-      <div class="animate-float absolute top-10 left-10 h-2 w-2 rounded-full bg-white/20"></div>
+      <div
+        class="animate-float absolute top-10 left-10 h-2 w-2 rounded-full bg-white/20"
+      ></div>
       <div
         class="animate-float absolute right-20 bottom-20 h-3 w-3 rounded-full bg-white/10"
         style="animation-delay: 2s"
@@ -281,7 +283,9 @@
           </div>
         </div>
 
-        <div class="animate-fade-in animate-delay-600 flex justify-center gap-4 opacity-0">
+        <div
+          class="animate-fade-in animate-delay-600 flex justify-center gap-4 opacity-0"
+        >
           <!-- TODO: Update ExternalLink icon to something better -->
           <a
             href={personalInfo.linkedin}
@@ -311,7 +315,10 @@
             class="glass group rounded-full p-3 transition-all duration-300 hover:scale-110 hover:bg-white/30"
             aria-label="Personal Website"
           >
-            <Globe size={24} class="transition-transform duration-300 group-hover:rotate-12" />
+            <Globe
+              size={24}
+              class="transition-transform duration-300 group-hover:rotate-12"
+            />
           </a>
           <a
             href="/Laurens-van-der-Tas-CV.pdf"
@@ -333,17 +340,19 @@
       <Section title="About" animationDelay={100}>
         <div class="card p-6">
           <p class="text-secondary text-lg leading-relaxed">
-            Senior Data Platform & MLOps Engineer with a track record of building data systems from
-            the ground up and guiding them into fully automated, production-grade platforms. My
-            career began at the intersection of econometrics and software engineering as a freelance
-            developer, progressed into data science and advanced analytics, and has since evolved
-            into leading machine learning and MLOps initiatives at scale. I bring a unique blend of
-            engineering craftsmanship and quantitative expertise, backed by an MSc with a solid
-            econometric background. Whether designing architectures, operationalizing ML, or
-            mentoring teams, I focus on turning complex data problems into solutions that deliver
-            long-term value. Academic excellence (both theses graded 9/10) underscores a commitment
-            to precision, while open-source contributions and continuous learning reflect my drive
-            to stay ahead in a rapidly changing field.
+            Senior Data Platform & MLOps Engineer with a track record of building data
+            systems from the ground up and guiding them into fully automated,
+            production-grade platforms. My career began at the intersection of
+            econometrics and software engineering as a freelance developer, progressed
+            into data science and advanced analytics, and has since evolved into leading
+            machine learning and MLOps initiatives at scale. I bring a unique blend of
+            engineering craftsmanship and quantitative expertise, backed by an MSc with
+            a solid econometric background. Whether designing architectures,
+            operationalizing ML, or mentoring teams, I focus on turning complex data
+            problems into solutions that deliver long-term value. Academic excellence
+            (both theses graded 9/10) underscores a commitment to precision, while
+            open-source contributions and continuous learning reflect my drive to stay
+            ahead in a rapidly changing field.
           </p>
         </div>
       </Section>
@@ -365,7 +374,11 @@
             <h3 class="text-primary mb-4 font-semibold">Data Engineering & MLOps</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.dataEngineering as skill, i}
-                <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 200} />
+                <SkillTag
+                  skill={skill.name}
+                  level={skill.level}
+                  delay={i * 100 + 200}
+                />
               {/each}
             </div>
           </div>
@@ -374,7 +387,11 @@
             <h3 class="text-primary mb-4 font-semibold">Cloud & DevOps</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.cloudDevOps as skill, i}
-                <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 300} />
+                <SkillTag
+                  skill={skill.name}
+                  level={skill.level}
+                  delay={i * 100 + 300}
+                />
               {/each}
             </div>
           </div>
@@ -383,7 +400,11 @@
             <h3 class="text-primary mb-4 font-semibold">Analytics & ML</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.advancedAnalytics as skill, i}
-                <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 400} />
+                <SkillTag
+                  skill={skill.name}
+                  level={skill.level}
+                  delay={i * 100 + 400}
+                />
               {/each}
             </div>
           </div>
@@ -392,7 +413,11 @@
             <h3 class="text-primary mb-4 font-semibold">Tools & Platforms</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.tools as skill, i}
-                <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 500} />
+                <SkillTag
+                  skill={skill.name}
+                  level={skill.level}
+                  delay={i * 100 + 500}
+                />
               {/each}
             </div>
           </div>
@@ -465,7 +490,9 @@
             class="animate-slide-in-left card p-6 opacity-0"
             style="animation-delay: {i * 200}ms"
           >
-            <div class="mb-3 flex flex-col sm:flex-row sm:items-start sm:justify-between">
+            <div
+              class="mb-3 flex flex-col sm:flex-row sm:items-start sm:justify-between"
+            >
               <div>
                 <h3 class="text-primary text-lg font-semibold">{edu.degree}</h3>
                 <p class="text-accent font-medium">{edu.institution}</p>
@@ -483,7 +510,8 @@
   <footer class="bg-secondary border-primary transition-theme mt-16 border-t py-8">
     <div class="mx-auto max-w-4xl px-6 text-center">
       <p class="text-muted">
-        &copy; {new Date().getFullYear()} &nbsp;{personalInfo.name}. All rights reserved.
+        &copy; {new Date().getFullYear()} &nbsp;{personalInfo.name}. All rights
+        reserved.
       </p>
     </div>
   </footer>
