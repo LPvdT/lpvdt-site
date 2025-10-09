@@ -19,11 +19,9 @@ updates:
 
   - package-ecosystem: npm
     directory: /
-    # TODO: Use cron to run more frequently
     schedule:
-      interval: weekly
-      day: sunday
-      time: '10:00'
+      interval: cron
+      cronjob: '30 6 * * 6/3'
       timezone: Europe/Amsterdam
     target-branch: main
     pull-request-branch-name:
