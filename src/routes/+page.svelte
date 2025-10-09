@@ -1,27 +1,20 @@
 <script lang="ts">
-  import {
-    Download,
-    Mail,
-    MapPin,
-    Phone,
-    ExternalLink,
-    Globe
-  } from 'lucide-svelte';
+  import { Download, Mail, MapPin, Phone, ExternalLink, Globe } from 'lucide-svelte';
   import Section from '$lib/components/Section.svelte';
   import SkillTag from '$lib/components/SkillTag.svelte';
   import ExperienceCard from '$lib/components/ExperienceCard.svelte';
   import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 
-  // CV Data - Replace with your actual information
+  // TODO: CV Data - Replace with your actual information
   const personalInfo = {
     name: 'Laurens van der Tas',
     title: 'Senior Cloud Data Platform & MLOps Engineer',
     email: 'laurens.vandertas@gmail.com',
-    phone: '+31 6 1234 5678', // Add your phone number
+    phone: '+31 6 1234 5678', // TODO: Remove
     location: 'Rotterdam, South Holland, Netherlands',
     linkedin: 'https://linkedin.com/in/lpvdt',
     github: 'https://github.com/LPvdT',
-    website: 'https://lpvdt.github.io'
+    website: 'https://lpvdt.github.io',
   };
 
   const skills = {
@@ -38,7 +31,7 @@
       { name: 'Svelte', level: 'intermediate' },
       { name: 'FastAPI', level: 'expert' },
       { name: 'TensorFlow', level: 'expert' },
-      { name: 'PyTorch', level: 'expert' }
+      { name: 'PyTorch', level: 'expert' },
     ],
     dataEngineering: [
       { name: 'Databricks', level: 'expert' },
@@ -50,7 +43,7 @@
       { name: 'Polars', level: 'advanced' },
       { name: 'Airflow', level: 'expert' },
       { name: 'Dagster', level: 'advanced' },
-      { name: 'DuckDB', level: 'advanced' }
+      { name: 'DuckDB', level: 'advanced' },
     ],
     cloudDevOps: [
       { name: 'Kubernetes', level: 'expert' },
@@ -59,7 +52,7 @@
       { name: 'Azure', level: 'expert' },
       { name: 'GitHub Actions', level: 'advanced' },
       { name: 'Azure Pipelines', level: 'advanced' },
-      { name: 'Helm', level: 'intermediate' }
+      { name: 'Helm', level: 'intermediate' },
     ],
     analytics: [
       { name: 'Machine Learning', level: 'expert' },
@@ -68,7 +61,7 @@
       { name: 'MLOps', level: 'expert' },
       { name: 'Econometrics', level: 'expert' },
       { name: 'Time Series Analysis', level: 'advanced' },
-      { name: 'Reinforcement Learning', level: 'intermediate' }
+      { name: 'Reinforcement Learning', level: 'intermediate' },
     ],
     tools: [
       { name: 'Power BI', level: 'expert' },
@@ -76,8 +69,8 @@
       { name: 'Tableau', level: 'expert' },
       { name: 'Plotly', level: 'advanced' },
       { name: 'Git', level: 'expert' },
-      { name: 'SQL/NoSQL', level: 'expert' }
-    ]
+      { name: 'SQL/NoSQL', level: 'expert' },
+    ],
   };
 
   const experiences = [
@@ -96,8 +89,8 @@
         'Terraform',
         'Azure',
         'Kafka',
-        'Airflow'
-      ]
+        'Airflow',
+      ],
     },
     {
       title: 'Senior Machine Learning Engineer',
@@ -112,8 +105,8 @@
         'MLflow',
         'Kubernetes',
         'Azure',
-        'Databricks'
-      ]
+        'Databricks',
+      ],
     },
     {
       title: 'Data Scientist/Engineer',
@@ -121,15 +114,7 @@
       period: 'Nov 2018 -- Oct 2021',
       description:
         "Pioneered the company's data-driven transformation by building the foundational data infrastructure and implementing the first production ML pipelines. Established modern data engineering practices and CI/CD workflows.",
-      technologies: [
-        'Python',
-        'R',
-        'SQL',
-        'Azure',
-        'Databricks',
-        'Power BI',
-        'Docker'
-      ]
+      technologies: ['Python', 'R', 'SQL', 'Azure', 'Databricks', 'Power BI', 'Docker'],
     },
     {
       title: 'Freelance Developer',
@@ -137,7 +122,7 @@
       period: 'Sep 2012 -- Aug 2018',
       description:
         'Delivered full-stack web applications and econometric modeling solutions for diverse clients. Specialized in translating complex mathematical concepts into practical software solutions.',
-      technologies: ['Python', 'R', 'JavaScript', 'SQL', 'Docker', 'Linux']
+      technologies: ['Python', 'R', 'JavaScript', 'SQL', 'Docker', 'Linux'],
     },
     {
       title: 'Commercial Insurance Agent',
@@ -145,8 +130,8 @@
       period: '2010 -- 2011',
       description:
         'Provided sales and advisory services for commercial insurance products, developing strong client relationship and communication skills.',
-      technologies: []
-    }
+      technologies: [],
+    },
   ];
 
   const education = [
@@ -155,27 +140,27 @@
       institution: 'Utrecht University',
       period: '2016 -- 2018',
       description:
-        'Focus on quantitative finance, econometrics, and investment management. Thesis on machine learning'
+        'Focus on quantitative finance, econometrics, and investment management. Thesis on machine learning',
     },
     {
       degree: 'BSc Economics & Business Economics',
       institution: 'Utrecht University',
       period: '2012 -- 2015',
       description:
-        'Customized programme emphasizing econometrics, statistics, and finance. Thesis graded'
+        'Customized programme emphasizing econometrics, statistics, and finance. Thesis graded',
     },
     {
       degree: 'International Business and Management Studies',
       institution: 'Avans University of Applied Sciences',
       period: '2011',
-      description: 'Propaedeutic obtained'
+      description: 'Propaedeutic obtained',
     },
     {
       degree: 'Pre-University Education (VWO)',
       institution: 'Edison College',
       period: '2004 -- 2010',
-      description: 'Science'
-    }
+      description: 'Science',
+    },
   ];
 
   const projects = [
@@ -184,15 +169,15 @@
       description:
         'Built comprehensive MLOps platform with automated model deployment, monitoring, and lifecycle management using Databricks, MLflow, and Kubernetes.',
       technologies: ['Python', 'Databricks', 'MLflow', 'Kubernetes', 'Docker'],
-      link: 'https://github.com/LPvdT'
+      link: 'https://github.com/LPvdT',
     },
     {
       name: 'Real-time Data Platform',
       description:
         'Designed and implemented real-time streaming data platform handling millions of events daily using Kafka, Flink, and modern data lakehouse architecture.',
       technologies: ['Kafka', 'Flink', 'Python', 'Terraform', 'Azure'],
-      link: 'https://github.com/LPvdT'
-    }
+      link: 'https://github.com/LPvdT',
+    },
   ];
 </script>
 
@@ -205,13 +190,9 @@
   <section
     class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 text-white"
   >
-    <div
-      class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"
-    ></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
     <div class="absolute inset-0">
-      <div
-        class="animate-float absolute top-10 left-10 h-2 w-2 rounded-full bg-white/20"
-      ></div>
+      <div class="animate-float absolute top-10 left-10 h-2 w-2 rounded-full bg-white/20"></div>
       <div
         class="animate-float absolute right-20 bottom-20 h-3 w-3 rounded-full bg-white/10"
         style="animation-delay: 2s"
@@ -251,9 +232,7 @@
             class="flex items-center gap-2 text-blue-100/90 transition-all duration-300 hover:scale-105 hover:text-white"
           >
             <Mail size={20} />
-            <span class="hidden font-medium sm:inline"
-              >{personalInfo.email}</span
-            >
+            <span class="hidden font-medium sm:inline">{personalInfo.email}</span>
           </a>
           <div class="flex items-center gap-2 text-blue-100/90">
             <MapPin size={20} />
@@ -261,15 +240,11 @@
           </div>
           <div class="flex items-center gap-2 text-blue-100/90">
             <Phone size={20} />
-            <span class="hidden font-medium sm:inline"
-              >{personalInfo.phone}</span
-            >
+            <span class="hidden font-medium sm:inline">{personalInfo.phone}</span>
           </div>
         </div>
 
-        <div
-          class="animate-fade-in animate-delay-600 flex justify-center gap-4 opacity-0"
-        >
+        <div class="animate-fade-in animate-delay-600 flex justify-center gap-4 opacity-0">
           <a
             href={personalInfo.linkedin}
             target="_blank"
@@ -298,10 +273,7 @@
             class="glass group rounded-full p-3 transition-all duration-300 hover:scale-110 hover:bg-white/30"
             aria-label="Personal Website"
           >
-            <Globe
-              size={24}
-              class="transition-transform duration-300 group-hover:rotate-12"
-            />
+            <Globe size={24} class="transition-transform duration-300 group-hover:rotate-12" />
           </a>
           <a
             href="/Laurens-van-der-Tas-CV.pdf"
@@ -323,20 +295,17 @@
       <Section title="About" animationDelay={100}>
         <div class="card p-6">
           <p class="text-secondary text-lg leading-relaxed">
-            Senior Data Platform & MLOps Engineer with a track record of
-            building data systems from the ground up and guiding them into fully
-            automated, production-grade platforms. My career began at the
-            intersection of econometrics and software engineering as a freelance
-            developer, progressed into data science and advanced analytics, and
-            has since evolved into leading machine learning and MLOps
-            initiatives at scale. I bring a unique blend of engineering
-            craftsmanship and quantitative expertise, backed by an MSc with a
-            solid econometric background. Whether designing architectures,
-            operationalizing ML, or mentoring teams, I focus on turning complex
-            data problems into solutions that deliver long-term value. Academic
-            excellence (both theses graded 9/10) underscores a commitment to
-            precision, while open-source contributions and continuous learning
-            reflect my drive to stay ahead in a rapidly changing field.
+            Senior Data Platform & MLOps Engineer with a track record of building data systems from
+            the ground up and guiding them into fully automated, production-grade platforms. My
+            career began at the intersection of econometrics and software engineering as a freelance
+            developer, progressed into data science and advanced analytics, and has since evolved
+            into leading machine learning and MLOps initiatives at scale. I bring a unique blend of
+            engineering craftsmanship and quantitative expertise, backed by an MSc with a solid
+            econometric background. Whether designing architectures, operationalizing ML, or
+            mentoring teams, I focus on turning complex data problems into solutions that deliver
+            long-term value. Academic excellence (both theses graded 9/10) underscores a commitment
+            to precision, while open-source contributions and continuous learning reflect my drive
+            to stay ahead in a rapidly changing field.
           </p>
         </div>
       </Section>
@@ -349,26 +318,16 @@
             <h3 class="text-primary mb-4 font-semibold">Programming</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.programming as skill, i}
-                <SkillTag
-                  skill={skill.name}
-                  level={skill.level}
-                  delay={i * 100}
-                />
+                <SkillTag skill={skill.name} level={skill.level} delay={i * 100} />
               {/each}
             </div>
           </div>
 
           <div class="card p-6">
-            <h3 class="text-primary mb-4 font-semibold">
-              Data Engineering & MLOps
-            </h3>
+            <h3 class="text-primary mb-4 font-semibold">Data Engineering & MLOps</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.dataEngineering as skill, i}
-                <SkillTag
-                  skill={skill.name}
-                  level={skill.level}
-                  delay={i * 100 + 200}
-                />
+                <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 200} />
               {/each}
             </div>
           </div>
@@ -377,11 +336,7 @@
             <h3 class="text-primary mb-4 font-semibold">Cloud & DevOps</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.cloudDevOps as skill, i}
-                <SkillTag
-                  skill={skill.name}
-                  level={skill.level}
-                  delay={i * 100 + 300}
-                />
+                <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 300} />
               {/each}
             </div>
           </div>
@@ -390,11 +345,7 @@
             <h3 class="text-primary mb-4 font-semibold">Analytics & ML</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.analytics as skill, i}
-                <SkillTag
-                  skill={skill.name}
-                  level={skill.level}
-                  delay={i * 100 + 400}
-                />
+                <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 400} />
               {/each}
             </div>
           </div>
@@ -403,11 +354,7 @@
             <h3 class="text-primary mb-4 font-semibold">Tools & Platforms</h3>
             <div class="flex flex-wrap gap-2">
               {#each skills.tools as skill, i}
-                <SkillTag
-                  skill={skill.name}
-                  level={skill.level}
-                  delay={i * 100 + 500}
-                />
+                <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 500} />
               {/each}
             </div>
           </div>
@@ -480,9 +427,7 @@
             class="animate-slide-in-left card p-6 opacity-0"
             style="animation-delay: {i * 200}ms"
           >
-            <div
-              class="mb-3 flex flex-col sm:flex-row sm:items-start sm:justify-between"
-            >
+            <div class="mb-3 flex flex-col sm:flex-row sm:items-start sm:justify-between">
               <div>
                 <h3 class="text-primary text-lg font-semibold">{edu.degree}</h3>
                 <p class="text-accent font-medium">{edu.institution}</p>
@@ -497,12 +442,10 @@
   </div>
 
   <!-- Footer -->
-  <footer
-    class="bg-secondary border-primary transition-theme mt-16 border-t py-8"
-  >
+  <footer class="bg-secondary border-primary transition-theme mt-16 border-t py-8">
     <div class="mx-auto max-w-4xl px-6 text-center">
       <p class="text-muted">
-        © 2024 {personalInfo.name}. All rights reserved.
+        &copy; {new Date().getFullYear()} &nbsp;{personalInfo.name}. All rights reserved.
       </p>
     </div>
   </footer>
