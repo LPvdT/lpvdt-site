@@ -5,7 +5,6 @@
   import ExperienceCard from '$lib/components/ExperienceCard.svelte';
   import ScrollToTop from '$lib/components/ScrollToTop.svelte';
 
-  // TODO: CV Data - Replace with your actual information
   const personalInfo = {
     name: 'Laurens van der Tas',
     title: 'Senior Cloud Data Platform & MLOps Engineer',
@@ -19,56 +18,65 @@
   const skills = {
     programming: [
       { name: 'Python', level: 'expert' },
-      { name: 'R', level: 'expert' },
-      { name: 'Rust', level: 'advanced' },
-      { name: 'Scala', level: 'advanced' },
-      { name: 'Go', level: 'advanced' },
+      { name: 'R', level: 'advanced' },
+      { name: 'Rust', level: 'intermediate' },
+      { name: 'Scala', level: 'intermediate' },
+      { name: 'Go', level: 'intermediate' },
       { name: 'TypeScript', level: 'advanced' },
-      { name: 'React', level: 'intermediate' },
-      { name: 'Next.js', level: 'intermediate' },
-      { name: 'NestJS', level: 'intermediate' },
+      { name: 'React', level: 'advanced' },
+      { name: 'Next.js', level: 'advanced' },
+      { name: 'NestJS', level: 'advanced' },
       { name: 'Svelte', level: 'intermediate' },
       { name: 'FastAPI', level: 'expert' },
-      { name: 'TensorFlow', level: 'expert' },
+      { name: 'TensorFlow', level: 'advanced' },
       { name: 'PyTorch', level: 'expert' },
+      { name: 'Bash', level: 'expert' },
     ],
     dataEngineering: [
       { name: 'Databricks', level: 'expert' },
       { name: 'MLflow', level: 'expert' },
-      { name: 'dbt', level: 'expert' },
-      { name: 'Kafka', level: 'expert' },
-      { name: 'Flink', level: 'advanced' },
+      { name: 'dbt', level: 'advanced' },
+      { name: 'Kafka', level: 'advanced' },
+      { name: 'Flink', level: 'intermediate' },
       { name: 'PySpark', level: 'expert' },
-      { name: 'Polars', level: 'advanced' },
-      { name: 'Airflow', level: 'expert' },
+      { name: 'Polars', level: 'expert' },
+      { name: 'Databricks Workflows', level: 'expert' },
+      { name: 'Airflow', level: 'intermediate' },
       { name: 'Dagster', level: 'advanced' },
       { name: 'DuckDB', level: 'advanced' },
+      { name: 'ETL/ELT/CDC', level: 'expert' },
+      { name: 'Database & Data Lakehouse Design', level: 'expert' },
     ],
     cloudDevOps: [
-      { name: 'Kubernetes', level: 'expert' },
+      { name: 'Kubernetes', level: 'advanced' },
       { name: 'Docker', level: 'expert' },
-      { name: 'Terraform', level: 'expert' },
+      { name: 'Terraform', level: 'advanced' },
       { name: 'Azure', level: 'expert' },
-      { name: 'GitHub Actions', level: 'advanced' },
-      { name: 'Azure Pipelines', level: 'advanced' },
+      { name: 'AWS', level: 'advanced' },
+      { name: 'GCP', level: 'intermediate' },
+      { name: 'GitHub Actions', level: 'expert' },
+      { name: 'Azure Pipelines', level: 'expert' },
       { name: 'Helm', level: 'intermediate' },
     ],
-    analytics: [
-      { name: 'Machine Learning', level: 'expert' },
+    advancedAnalytics: [
+      { name: 'Machine Learning (all algorithms)', level: 'expert' },
       { name: 'Deep Learning', level: 'expert' },
-      { name: 'LLMs', level: 'expert' },
+      { name: 'LLMs (fine-tuning, inference & deployment)', level: 'advanced' },
       { name: 'MLOps', level: 'expert' },
-      { name: 'Econometrics', level: 'expert' },
-      { name: 'Time Series Analysis', level: 'advanced' },
+      { name: 'Econometric Modeling', level: 'expert' },
+      { name: 'Time Series Analysis', level: 'expert' },
       { name: 'Reinforcement Learning', level: 'intermediate' },
     ],
     tools: [
-      { name: 'Power BI', level: 'expert' },
+      { name: 'Power BI', level: 'advanced' },
       { name: 'Grafana', level: 'expert' },
-      { name: 'Tableau', level: 'expert' },
+      { name: 'Tableau', level: 'advanced' },
       { name: 'Plotly', level: 'advanced' },
+      { name: 'Stata', level: 'advanced' },
       { name: 'Git', level: 'expert' },
       { name: 'SQL/NoSQL', level: 'expert' },
+      { name: '*NIX', level: 'expert' },
+      { name: 'APIs (REST/GraphQL)', level: 'expert' },
     ],
   };
 
@@ -339,7 +347,7 @@
           <div class="card p-6">
             <h3 class="text-primary mb-4 font-semibold">Analytics & ML</h3>
             <div class="flex flex-wrap gap-2">
-              {#each skills.analytics as skill, i}
+              {#each skills.advancedAnalytics as skill, i}
                 <SkillTag skill={skill.name} level={skill.level} delay={i * 100 + 400} />
               {/each}
             </div>
