@@ -19,6 +19,7 @@ updates:
 
   - package-ecosystem: npm
     directory: /
+    # TODO: Use cron to run more frequently
     schedule:
       interval: weekly
       day: sunday
