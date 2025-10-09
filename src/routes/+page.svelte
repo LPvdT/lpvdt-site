@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Download, Mail, MapPin, Phone, ExternalLink, Globe } from 'lucide-svelte';
+  import { Download, Mail, MapPin, ExternalLink, Globe } from 'lucide-svelte';
   import Section from '$lib/components/Section.svelte';
   import SkillTag from '$lib/components/SkillTag.svelte';
   import ExperienceCard from '$lib/components/ExperienceCard.svelte';
@@ -10,7 +10,6 @@
     name: 'Laurens van der Tas',
     title: 'Senior Cloud Data Platform & MLOps Engineer',
     email: 'laurens.vandertas@gmail.com',
-    phone: '+31 6 1234 5678', // TODO: Remove
     location: 'Rotterdam, South Holland, Netherlands',
     linkedin: 'https://linkedin.com/in/lpvdt',
     github: 'https://github.com/LPvdT',
@@ -237,10 +236,6 @@
           <div class="flex items-center gap-2 text-blue-100/90">
             <MapPin size={20} />
             <span class="font-medium">{personalInfo.location}</span>
-          </div>
-          <div class="flex items-center gap-2 text-blue-100/90">
-            <Phone size={20} />
-            <span class="hidden font-medium sm:inline">{personalInfo.phone}</span>
           </div>
         </div>
 
