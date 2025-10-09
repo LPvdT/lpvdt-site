@@ -316,7 +316,7 @@
           <a
             href="/Laurens-van-der-Tas-CV.pdf"
             target="_blank"
-            class="animate-pulse-soft group rounded-full bg-white p-3 text-indigo-600 shadow-lg transition-all duration-300 hover:scale-110 hover:bg-indigo-50"
+            class="glass group rounded-full p-3 transition-all duration-300 hover:scale-110 hover:bg-white/30"
             aria-label="Download CV"
           >
             <Download size={24} class="group-hover:animate-bounce-subtle" />
