@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ['main']
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,50 +12,71 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: pages
   cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: ./
+    shell: bash
 
 jobs:
   build:
+    name: Build site
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # TODO: Add caching
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: ${{ hashFiles('**/pnpm-lock.yaml') }}
 
-      # TODO: Add caching
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
         with:
           version: 8
+          run_install: false
 
-      - name: Install dependencies
-        run: pnpm install
+      - name: Set pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - name: Build
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Build artifacts
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: |
           pnpm run build
           touch build/.nojekyll
 
-      - name: Upload Artifacts
+      - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'build/'
+          path: build
 
   deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    needs: build
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
