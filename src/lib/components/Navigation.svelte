@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Sun, Moon } from 'lucide-svelte';
-  import { onMount } from 'svelte';
+  import { Sun, Moon } from "lucide-svelte";
+  import { onMount } from "svelte";
 
   let {
     isDark = $bindable(),
@@ -11,17 +11,17 @@
   let navElement: HTMLElement;
 
   const menuItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Education', href: '#education' }
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#experience" },
+    { label: "Projects", href: "#projects" },
+    { label: "Education", href: "#education" }
   ];
 
   function scrollToSection(href: string) {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       isMenuOpen = false;
     }
   }
@@ -33,17 +33,17 @@
   }
 
   function handleKeydown(event: KeyboardEvent) {
-    if (event.key === 'Escape') {
+    if (event.key === "Escape") {
       isMenuOpen = false;
     }
   }
 
   onMount(() => {
-    document.addEventListener('click', handleClickOutside);
-    document.addEventListener('keydown', handleKeydown);
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("keydown", handleKeydown);
     return () => {
-      document.removeEventListener('click', handleClickOutside);
-      document.removeEventListener('keydown', handleKeydown);
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("keydown", handleKeydown);
     };
   });
 </script>
@@ -74,7 +74,7 @@
           class="theme-toggle"
           onclick={toggleTheme}
           aria-label="Toggle dark mode"
-          title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          title={isDark ? "Switch to light mode" : "Switch to dark mode"}
         >
           {#if isDark}
             <Sun size={18} class="theme-icon" />
@@ -87,7 +87,7 @@
         <button
           onclick={() => (isMenuOpen = !isMenuOpen)}
           class="hamburger-menu text-secondary hover:bg-tertiary hover:text-primary relative rounded-md p-2 transition-all duration-300 md:hidden"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
           <div
             class="hamburger-lines relative flex h-6 w-6 flex-col items-center justify-center"
@@ -139,7 +139,7 @@
   <div
     class="animate-fade-in fixed inset-0 z-40 bg-black/20 backdrop-blur-sm md:hidden"
     onclick={() => (isMenuOpen = false)}
-    onkeydown={(e) => e.key === 'Enter' && (isMenuOpen = false)}
+    onkeydown={(e) => e.key === "Enter" && (isMenuOpen = false)}
     role="button"
     tabindex="0"
     aria-label="Close menu"

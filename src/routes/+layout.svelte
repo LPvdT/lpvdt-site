@@ -1,20 +1,20 @@
 <script lang="ts">
-  import '../app.css';
-  import favicon from '$lib/assets/favicon.svg';
-  import Navigation from '$lib/components/Navigation.svelte';
-  import { browser } from '$app/environment';
-  import { onMount } from 'svelte';
-  import { Sun, Moon } from 'lucide-svelte';
+  import "../app.css";
+  import favicon from "$lib/assets/favicon.svg";
+  import Navigation from "$lib/components/Navigation.svelte";
+  import { browser } from "$app/environment";
+  import { onMount } from "svelte";
+  import { Sun, Moon } from "lucide-svelte";
 
   let { children } = $props();
 
   let isDark = $state(false);
 
   function updateTheme() {
-    const theme = isDark ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', theme);
+    const theme = isDark ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", theme);
     if (browser) {
-      localStorage.setItem('theme', theme);
+      localStorage.setItem("theme", theme);
     }
   }
 
@@ -25,12 +25,10 @@
 
   onMount(() => {
     // Check for saved theme preference or default to system preference
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-    isDark = savedTheme ? savedTheme === 'dark' : prefersDark;
+    isDark = savedTheme ? savedTheme === "dark" : prefersDark;
     updateTheme();
   });
 </script>
@@ -48,11 +46,7 @@
 
   <link rel="icon" href={favicon} />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin="anonymous"
-  />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
     rel="stylesheet"

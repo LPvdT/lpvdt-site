@@ -1,19 +1,19 @@
 <script lang="ts">
   let {
     skill,
-    level = 'intermediate',
+    level = "intermediate",
     delay = 0
   }: {
     skill: string;
-    level?: 'beginner' | 'intermediate' | 'advanced' | 'expert' | string;
+    level?: "beginner" | "intermediate" | "advanced" | "expert" | string;
     delay?: number;
   } = $props();
 
   const levelClasses = {
-    beginner: 'skill-beginner',
-    intermediate: 'skill-intermediate',
-    advanced: 'skill-advanced',
-    expert: 'skill-expert'
+    beginner: "skill-beginner",
+    intermediate: "skill-intermediate",
+    advanced: "skill-advanced",
+    expert: "skill-expert"
   };
 </script>
 

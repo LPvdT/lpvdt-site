@@ -2,7 +2,7 @@
   let {
     title,
     children,
-    class: className = '',
+    class: className = "",
     animationDelay = 0
   }: {
     title: string;
