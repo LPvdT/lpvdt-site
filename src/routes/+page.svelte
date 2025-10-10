@@ -204,20 +204,18 @@
   ];
 
   const projects = [
-    // TODO: Change this to some GH repos
     {
-      name: "MLOps Platform",
+      name: "CSV Generator",
       description:
-        "Built comprehensive MLOps platform with automated model deployment, monitoring, and lifecycle management using Databricks, MLflow, and Kubernetes.",
-      technologies: ["Python", "Databricks", "MLflow", "Kubernetes", "Docker"],
-      link: "https://github.com/LPvdT"
+        "High performance CSV generator written in Python for generating huge datasets in seconds. Options for both Numpy and Faker.",
+      technologies: ["Python", "GitHub Actions", "uv"],
+      link: "https://github.com/LPvdT/csv-gen"
     },
     {
-      name: "Real-time Data Platform",
-      description:
-        "Designed and implemented real-time streaming data platform handling millions of events daily using Kafka, Flink, and modern data lakehouse architecture.",
-      technologies: ["Kafka", "Flink", "Python", "Terraform", "Azure"],
-      link: "https://github.com/LPvdT"
+      name: "Scraping Pokemon",
+      description: "Scraping of Pokemon data using Python, Scrapy, and uv.",
+      technologies: ["Python", "Scrapy", "uv"],
+      link: "https://github.com/LPvdT/scraping-pokemon"
     }
   ];
 </script>
