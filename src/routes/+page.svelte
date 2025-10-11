@@ -354,6 +354,7 @@
         </div>
       </Section>
     </div>
+
     <!-- Skills Section -->
     <div id="skills">
       <Section title="Skills" animationDelay={200}>
