@@ -1,223 +1,6 @@
 <script lang="ts">
-  // TODO: Check all content in development
+  import { Section, ExperienceCard, ScrollToTop, SkillTag, content } from "$lib";
   import { Download, Mail, MapPin, ExternalLink, Globe } from "lucide-svelte";
-  import Section from "$lib/components/Section.svelte";
-  import SkillTag from "$lib/components/SkillTag.svelte";
-  import ExperienceCard from "$lib/components/ExperienceCard.svelte";
-  import ScrollToTop from "$lib/components/ScrollToTop.svelte";
-
-  const personalInfo = {
-    name: "Laurens van der Tas",
-    title: "Senior Cloud Data Platform & MLOps Engineer",
-    email: "laurens.vandertas@gmail.com",
-    location: "Rotterdam, South Holland, Netherlands",
-    linkedin: "https://linkedin.com/in/lpvdt",
-    github: "https://github.com/LPvdT",
-    website: "https://lpvdt.github.io"
-  };
-
-  const skills = {
-    programming: [
-      { name: "Python", level: "expert" },
-      { name: "R", level: "advanced" },
-      { name: "Rust", level: "intermediate" },
-      { name: "Scala", level: "intermediate" },
-      { name: "Go", level: "intermediate" },
-      { name: "TypeScript", level: "advanced" },
-      { name: "React", level: "advanced" },
-      { name: "Next.js", level: "advanced" },
-      { name: "NestJS", level: "advanced" },
-      { name: "Svelte", level: "intermediate" },
-      { name: "FastAPI", level: "expert" },
-      { name: "TensorFlow", level: "advanced" },
-      { name: "PyTorch", level: "expert" },
-      { name: "Bash", level: "expert" }
-    ],
-    dataEngineering: [
-      { name: "Databricks", level: "expert" },
-      { name: "MLflow", level: "expert" },
-      { name: "dbt", level: "advanced" },
-      { name: "Kafka", level: "advanced" },
-      { name: "Flink", level: "intermediate" },
-      { name: "PySpark", level: "expert" },
-      { name: "Polars", level: "expert" },
-      { name: "Databricks Workflows", level: "expert" },
-      { name: "Airflow", level: "intermediate" },
-      { name: "Dagster", level: "advanced" },
-      { name: "DuckDB", level: "advanced" },
-      { name: "ETL/ELT/CDC", level: "expert" },
-      { name: "Database & Data Lakehouse Design", level: "expert" }
-    ],
-    cloudDevOps: [
-      { name: "Kubernetes", level: "advanced" },
-      { name: "Docker", level: "expert" },
-      { name: "Terraform", level: "advanced" },
-      { name: "Azure", level: "expert" },
-      { name: "AWS", level: "advanced" },
-      { name: "GCP", level: "intermediate" },
-      { name: "GitHub Actions", level: "expert" },
-      { name: "Azure Pipelines", level: "expert" },
-      { name: "Helm", level: "intermediate" }
-    ],
-    advancedAnalytics: [
-      { name: "Machine Learning (all algorithms)", level: "expert" },
-      { name: "Deep Learning", level: "expert" },
-      { name: "LLMs (fine-tuning, inference & deployment)", level: "advanced" },
-      { name: "MLOps", level: "expert" },
-      { name: "Econometric Modeling", level: "expert" },
-      { name: "Time Series Analysis", level: "expert" },
-      { name: "Reinforcement Learning", level: "intermediate" }
-    ],
-    tools: [
-      { name: "Power BI", level: "advanced" },
-      { name: "Grafana", level: "expert" },
-      { name: "Tableau", level: "advanced" },
-      { name: "Plotly", level: "advanced" },
-      { name: "Stata", level: "advanced" },
-      { name: "Git", level: "expert" },
-      { name: "SQL/NoSQL", level: "expert" },
-      { name: "*NIX", level: "expert" },
-      { name: "APIs (REST/GraphQL)", level: "expert" }
-    ]
-  };
-
-  const experiences = [
-    {
-      title: "Senior Cloud Data Platform & MLOps Engineer",
-      company: "DELTA Fiber",
-      period: "Sep 2024 -- Present",
-      // TODO: Fix HTML rendering
-      description: `Shaping the company's cloud-native data platform as a lead engineer and
-        principal driver of its strategy, embedding modern MLOps practices to ensure
-        scalability, reliability, and long-term value.
-        Operating at the intersection
-        of infrastructure, data engineering, and applied machine learning, I guide
-        teams and stakeholders toward automated, production-ready solutions that
-        deliver tangible impact across the organization.
-
-        - Spearheaded the evolution of enterprise-wide data solutions, among
-        which streaming solutions, increasing analytical efficiency and reducing
-        deployment friction.
-
-        - Architected and maintained AI-enabled systems, including ML models,
-        APIs, and end-to-end data pipelines, ensuring robustness and operational
-        reliability.
-
-        - Implemented MLOps best practices: continuous integration/deployment
-        for ML models, monitoring, alerting, and model lifecycle management to
-        guarantee production stability.
-
-        - Led development of scalable scrapers, crawlers, and interactive
-        visualization platforms, expanding data accessibility and enabling faster,
-        data-driven decision-making.
-  `,
-      // TODO: Add more technologies
-      technologies: [
-        "Python",
-        "Databricks",
-        "MLflow",
-        "Kubernetes",
-        "Docker",
-        "Terraform",
-        "Azure",
-        "Kafka",
-        "Airflow"
-      ]
-    },
-    {
-      title: "Senior Machine Learning Engineer",
-      company: "DELTA Fiber",
-      period: "Nov 2021 -- Aug 2024",
-      // TODO: Fix HTML rendering
-      description:
-        "Shaping the company's cloud-native data platform as a lead engineer and principal driver of its strategy, embedding modern MLOps practices to ensure scalability, reliability, and long-term value. Operating at the intersection of infrastructure, data engineering, and applied machine learning, I guide teams and stakeholders toward automated, production-ready solutions that deliver tangible impact across the organization.\n\n- Spearheaded the evolution of enterprise-wide data solutions, among which streaming solutions, increasing analytical efficiency and reducing deployment friction.\n- Architected and maintained AI-enabled systems, including ML models, APIs, and end-to-end data pipelines, ensuring robustness and operational reliability.\n- Implemented MLOps best practices: continuous integration/deployment for ML models, monitoring, alerting, and model lifecycle management to guarantee production stability.\n- Led development of scalable scrapers, crawlers, and interactive visualization platforms, expanding data accessibility and enabling faster, data-driven decision-making.",
-      // TODO: Add more technologies
-      technologies: [
-        "Python",
-        "TensorFlow",
-        "PyTorch",
-        "MLflow",
-        "Kubernetes",
-        "Azure",
-        "Databricks"
-      ]
-    },
-    {
-      title: "Data Scientist/Engineer",
-      company: "DELTA Fiber",
-      period: "Nov 2018 -- Oct 2021",
-      // TODO: Fix HTML rendering
-      description:
-        "Pioneered the company's advanced analytics journey by establishing its first modern data infrastructure and operational machine learning pipelines. Balanced the dual role of data scientist and engineer, laying the foundation for scalable platforms that later became critical to the business.",
-      // TODO: Add more technologies
-      technologies: ["Python", "R", "SQL", "Azure", "Databricks", "Power BI", "Docker"]
-    },
-    {
-      title: "Freelance Developer",
-      company: "Private Clients",
-      period: "Sep 2012 -- Aug 2018",
-      // TODO: Fix HTML rendering
-      description:
-        "Independent developer combining econometric modelling with full-stack web solutions for a variety of clients. This role honed my ability to translate mathematical concepts into practical applications and gave me hands-on experience with diverse stacks, architectures, and deployment strategies.",
-      // TODO: Add more technologies
-      technologies: ["Python", "R", "JavaScript", "SQL", "Docker", "Linux"]
-    },
-    {
-      title: "Commercial Insurance Agent",
-      company: "Achmea",
-      period: "2010 -- 2011",
-      // TODO: Fix HTML rendering
-      description:
-        "Provided sales and advisory services for commercial insurance products, developing strong client relationship and communication skills.",
-      // TODO: Add more technologies
-      technologies: []
-    }
-  ];
-
-  const education = [
-    {
-      degree: "MSc Banking & Finance",
-      institution: "Utrecht University",
-      period: "2016 -- 2018",
-      description:
-        "Focus on quantitative finance, econometrics, and investment management. Thesis on machine learning (graded 9/10)."
-    },
-    {
-      degree: "BSc Economics & Business Economics",
-      institution: "Utrecht University",
-      period: "2012 -- 2015",
-      description:
-        "Customized programme emphasizing econometrics, statistics, and finance. Thesis graded 9/10."
-    },
-    {
-      degree: "International Business and Management Studies",
-      institution: "Avans University of Applied Sciences",
-      period: "2011",
-      description: "Propaedeutic obtained (in half a year)."
-    },
-    {
-      degree: "Pre-University Education (VWO)",
-      institution: "Edison College",
-      period: "2004 -- 2010",
-      description: "Science & Technology Profile."
-    }
-  ];
-
-  const projects = [
-    {
-      name: "CSV Generator",
-      description:
-        "High performance CSV generator written in Python for generating huge datasets in seconds. Options for both Numpy and Faker.",
-      technologies: ["Python", "GitHub Actions", "uv"],
-      link: "https://github.com/LPvdT/csv-gen"
-    },
-    {
-      name: "Scraping Pokemon",
-      description: "Scraping of Pokemon data using Python, Scrapy, and uv.",
-      technologies: ["Python", "Scrapy", "uv"],
-      link: "https://github.com/LPvdT/scraping-pokemon"
-    }
-  ];
 </script>
 
 <svelte:head>
@@ -255,29 +38,31 @@
           class="animate-slide-in-up animate-delay-300 mb-4 font-bold tracking-tight opacity-0"
           style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.1;"
         >
-          {personalInfo.name}
+          {content.personalInfo.name}
         </h1>
 
         <p
           class="animate-slide-in-up animate-delay-400 mb-8 font-medium tracking-wide text-blue-100/90 opacity-0"
           style="font-size: clamp(1.125rem, 2.5vw, 1.5rem);"
         >
-          {personalInfo.title}
+          {content.personalInfo.title}
         </p>
 
         <div
           class="animate-fade-in animate-delay-500 mb-8 flex flex-wrap justify-center gap-6 opacity-0"
         >
           <a
-            href="mailto:{personalInfo.email}"
+            href="mailto:{content.personalInfo.email}"
             class="flex items-center gap-2 text-blue-100/90 transition-all duration-300 hover:scale-105 hover:text-white"
           >
             <Mail size={20} />
-            <span class="hidden font-medium sm:inline">{personalInfo.email}</span>
+            <span class="hidden font-medium sm:inline"
+              >{content.personalInfo.email}</span
+            >
           </a>
           <div class="flex items-center gap-2 text-blue-100/90">
             <MapPin size={20} />
-            <span class="font-medium">{personalInfo.location}</span>
+            <span class="font-medium">{content.personalInfo.location}</span>
           </div>
         </div>
 
@@ -286,7 +71,7 @@
         >
           <!-- TODO: Update ExternalLink icon to something better -->
           <a
-            href={personalInfo.linkedin}
+            href={content.personalInfo.linkedin}
             target="_blank"
             class="glass group rounded-full p-3 transition-all duration-300 hover:scale-110 hover:bg-white/30"
             aria-label="LinkedIn Profile"
@@ -297,7 +82,7 @@
             />
           </a>
           <a
-            href={personalInfo.github}
+            href={content.personalInfo.github}
             target="_blank"
             class="glass group rounded-full p-3 transition-all duration-300 hover:scale-110 hover:bg-white/30"
             aria-label="GitHub Profile"
@@ -308,7 +93,7 @@
             />
           </a>
           <a
-            href={personalInfo.website}
+            href={content.personalInfo.website}
             target="_blank"
             class="glass group rounded-full p-3 transition-all duration-300 hover:scale-110 hover:bg-white/30"
             aria-label="Personal Website"
@@ -355,6 +140,7 @@
         </div>
       </Section>
     </div>
+
     <!-- Skills Section -->
     <div id="skills">
       <Section title="Skills" animationDelay={200}>
@@ -362,7 +148,7 @@
           <div class="card p-6">
             <h3 class="text-primary mb-4 font-semibold">Programming</h3>
             <div class="flex flex-wrap gap-2">
-              {#each skills.programming as skill, i}
+              {#each content.skills.programming as skill, i}
                 <SkillTag skill={skill.name} level={skill.level} delay={i * 100} />
               {/each}
             </div>
@@ -371,7 +157,7 @@
           <div class="card p-6">
             <h3 class="text-primary mb-4 font-semibold">Data Engineering & MLOps</h3>
             <div class="flex flex-wrap gap-2">
-              {#each skills.dataEngineering as skill, i}
+              {#each content.skills.dataEngineering as skill, i}
                 <SkillTag
                   skill={skill.name}
                   level={skill.level}
@@ -384,7 +170,7 @@
           <div class="card p-6">
             <h3 class="text-primary mb-4 font-semibold">Cloud & DevOps</h3>
             <div class="flex flex-wrap gap-2">
-              {#each skills.cloudDevOps as skill, i}
+              {#each content.skills.cloudDevOps as skill, i}
                 <SkillTag
                   skill={skill.name}
                   level={skill.level}
@@ -397,7 +183,7 @@
           <div class="card p-6">
             <h3 class="text-primary mb-4 font-semibold">Analytics & ML</h3>
             <div class="flex flex-wrap gap-2">
-              {#each skills.advancedAnalytics as skill, i}
+              {#each content.skills.advancedAnalytics as skill, i}
                 <SkillTag
                   skill={skill.name}
                   level={skill.level}
@@ -410,7 +196,7 @@
           <div class="card p-6 md:col-span-2 lg:col-span-2">
             <h3 class="text-primary mb-4 font-semibold">Tools & Platforms</h3>
             <div class="flex flex-wrap gap-2">
-              {#each skills.tools as skill, i}
+              {#each content.skills.tools as skill, i}
                 <SkillTag
                   skill={skill.name}
                   level={skill.level}
@@ -427,13 +213,12 @@
     <div id="experience">
       <Section title="Work Experience" animationDelay={300}>
         <div class="space-y-6">
-          {#each experiences as experience, i}
+          {#each content.experiences as experience, i}
             <ExperienceCard
               title={experience.title}
               company={experience.company}
               period={experience.period}
               description={experience.description}
-              technologies={experience.technologies}
               delay={i * 200}
             />
           {/each}
@@ -445,7 +230,7 @@
     <div id="projects">
       <Section title="Featured Projects" animationDelay={400}>
         <div class="grid gap-6 md:grid-cols-2">
-          {#each projects as project, i}
+          {#each content.projects as project, i}
             <div
               class="animate-slide-in-right card p-6 opacity-0"
               style="animation-delay: {i * 200}ms"
@@ -483,7 +268,7 @@
     <!-- Education Section -->
     <div id="education">
       <Section title="Education" animationDelay={500}>
-        {#each education as edu, i}
+        {#each content.education as edu, i}
           <div
             class="animate-slide-in-left card p-6 opacity-0"
             style="animation-delay: {i * 200}ms"
@@ -508,7 +293,7 @@
   <footer class="bg-secondary border-primary transition-theme mt-16 border-t py-8">
     <div class="mx-auto max-w-4xl px-6 text-center">
       <p class="text-muted">
-        &copy; {new Date().getFullYear()} &nbsp;{personalInfo.name}. All rights
+        &copy; {new Date().getFullYear()} &nbsp;{content.personalInfo.name}. All rights
         reserved.
       </p>
     </div>

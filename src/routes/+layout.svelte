@@ -1,10 +1,9 @@
 <script lang="ts">
   import "../app.css";
   import favicon from "$lib/assets/favicon.svg";
-  import Navigation from "$lib/components/Navigation.svelte";
   import { browser } from "$app/environment";
   import { onMount } from "svelte";
-  import { Sun, Moon } from "lucide-svelte";
+  import { Navigation } from "$lib";
 
   let { children } = $props();
 
@@ -24,7 +23,6 @@
   }
 
   onMount(() => {
-    // Check for saved theme preference or default to system preference
     const savedTheme = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
