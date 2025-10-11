@@ -1,5 +1,4 @@
 <script lang="ts">
-  // TODO: Check all content in development
   import { Download, Mail, MapPin, ExternalLink, Globe } from "lucide-svelte";
   import Section from "$lib/components/Section.svelte";
   import SkillTag from "$lib/components/SkillTag.svelte";
@@ -107,7 +106,6 @@
         for ML models, monitoring, alerting, and model lifecycle management to
         guarantee production stability.
 
-        - Led development of scalable scrapers, crawlers, and interactive
         visualization platforms, expanding data accessibility and enabling faster,
         data-driven decision-making.
       `
