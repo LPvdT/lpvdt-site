@@ -110,67 +110,66 @@
         - Led development of scalable scrapers, crawlers, and interactive
         visualization platforms, expanding data accessibility and enabling faster,
         data-driven decision-making.
-  `,
-      // TODO: Add more technologies
-      technologies: [
-        "Python",
-        "Databricks",
-        "MLflow",
-        "Kubernetes",
-        "Docker",
-        "Terraform",
-        "Azure",
-        "Kafka",
-        "Airflow"
-      ]
+      `
     },
     {
       title: "Senior Machine Learning Engineer",
       company: "DELTA Fiber",
       period: "Nov 2021 -- Aug 2024",
       // TODO: Fix HTML rendering
-      description:
-        "Shaping the company's cloud-native data platform as a lead engineer and principal driver of its strategy, embedding modern MLOps practices to ensure scalability, reliability, and long-term value. Operating at the intersection of infrastructure, data engineering, and applied machine learning, I guide teams and stakeholders toward automated, production-ready solutions that deliver tangible impact across the organization.\n\n- Spearheaded the evolution of enterprise-wide data solutions, among which streaming solutions, increasing analytical efficiency and reducing deployment friction.\n- Architected and maintained AI-enabled systems, including ML models, APIs, and end-to-end data pipelines, ensuring robustness and operational reliability.\n- Implemented MLOps best practices: continuous integration/deployment for ML models, monitoring, alerting, and model lifecycle management to guarantee production stability.\n- Led development of scalable scrapers, crawlers, and interactive visualization platforms, expanding data accessibility and enabling faster, data-driven decision-making.",
-      // TODO: Add more technologies
-      technologies: [
-        "Python",
-        "TensorFlow",
-        "PyTorch",
-        "MLflow",
-        "Kubernetes",
-        "Azure",
-        "Databricks"
-      ]
+      description: `Took ownership of the company's machine learning stack, ensuring models were
+        not just experimental prototypes but reliable, monitored, and continuously
+        improving production assets. Collaborated with business units to deliver
+        insights and predictive capabilities that shaped strategic decision-making.
+
+        - Led integration of machine learning models into production systems.
+        - Built and maintained scalable pipelines and automated workflows.
+        - Supported data-driven decision-making with advanced analytics and visualizations.
+      `
     },
     {
       title: "Data Scientist/Engineer",
       company: "DELTA Fiber",
       period: "Nov 2018 -- Oct 2021",
       // TODO: Fix HTML rendering
-      description:
-        "Pioneered the company's advanced analytics journey by establishing its first modern data infrastructure and operational machine learning pipelines. Balanced the dual role of data scientist and engineer, laying the foundation for scalable platforms that later became critical to the business.",
-      // TODO: Add more technologies
-      technologies: ["Python", "R", "SQL", "Azure", "Databricks", "Power BI", "Docker"]
+      description: `
+        Pioneered the company's advanced analytics journey by establishing its first
+        modern data infrastructure and operational machine learning pipelines.
+        Balanced the dual role of data scientist and engineer, laying the groundwork
+        for scalable platforms that later became critical to the business.
+
+        - Designed and deployed the first company-wide data warehouse and ETL processes.
+        - Delivered initial advanced analytics solutions, including predictive models and automated APIs.
+        - Established CI/CD practices for data science and engineering workflows.
+        - Created scrapers, crawlers, and BI dashboards to improve operational visibility.
+      `
     },
     {
       title: "Freelance Developer",
       company: "Private Clients",
       period: "Sep 2012 -- Aug 2018",
       // TODO: Fix HTML rendering
-      description:
-        "Independent developer combining econometric modelling with full-stack web solutions for a variety of clients. This role honed my ability to translate mathematical concepts into practical applications and gave me hands-on experience with diverse stacks, architectures, and deployment strategies.",
-      // TODO: Add more technologies
-      technologies: ["Python", "R", "JavaScript", "SQL", "Docker", "Linux"]
+      description: `
+        Independent developer combining econometric modelling with full-stack web
+        solutions for a variety of clients. This role honed my ability to translate
+        mathematical concepts into practical applications and gave me hands-on
+        experience with diverse stacks, architectures, and deployment strategies.
+
+        - Built and deployed full-stack web applications and APIs across multiple frameworks.
+        - Developed econometric modelling solutions to support research and business cases.
+        - Applied statistical modelling and data analysis in client-focused projects.
+        - Gained experience with distributed systems, containerization, and
+          automation before moving into large-scale enterprise environments.
+      `
     },
     {
       title: "Commercial Insurance Agent",
       company: "Achmea",
       period: "2010 -- 2011",
       // TODO: Fix HTML rendering
-      description:
-        "Provided sales and advisory services for commercial insurance products, developing strong client relationship and communication skills.",
-      // TODO: Add more technologies
-      technologies: []
+      description: `
+        Worked in sales and advisory for commercial insurance products.
+      `
     }
   ];
 
@@ -433,7 +432,6 @@
               company={experience.company}
               period={experience.period}
               description={experience.description}
-              technologies={experience.technologies}
               delay={i * 200}
             />
           {/each}
