@@ -32,7 +32,7 @@
     "@tailwindcss/vite": "^4.1.14",
     "@types/node": "^24.7.1",
     "@vitest/browser": "^3.2.4",
-    "eslint": "^9.37.0",
+    "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-svelte": "^3.12.4",
     "gh-pages": "^6.3.0",
