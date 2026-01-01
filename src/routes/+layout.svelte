@@ -1,34 +1,34 @@
 <script lang="ts">
-  import "../app.css";
-  import favicon from "$lib/assets/favicon.svg";
-  import { browser } from "$app/environment";
-  import { onMount } from "svelte";
-  import { Navigation } from "$lib";
+import '../app.css'
+import { onMount } from 'svelte'
+import { browser } from '$app/environment'
+import { Navigation } from '$lib'
+import favicon from '$lib/assets/favicon.svg'
 
-  let { children } = $props();
+const { children } = $props()
 
-  let isDark = $state(false);
+let isDark = $state(false)
 
-  function updateTheme() {
-    const theme = isDark ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", theme);
-    if (browser) {
-      localStorage.setItem("theme", theme);
-    }
+function updateTheme() {
+  const theme = isDark ? 'dark' : 'light'
+  document.documentElement.setAttribute('data-theme', theme)
+  if (browser) {
+    localStorage.setItem('theme', theme)
   }
+}
 
-  function toggleTheme() {
-    isDark = !isDark;
-    updateTheme();
-  }
+function toggleTheme() {
+  isDark = !isDark
+  updateTheme()
+}
 
-  onMount(() => {
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+onMount(() => {
+  const savedTheme = localStorage.getItem('theme')
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
 
-    isDark = savedTheme ? savedTheme === "dark" : prefersDark;
-    updateTheme();
-  });
+  isDark = savedTheme ? savedTheme === 'dark' : prefersDark
+  updateTheme()
+})
 </script>
 
 <svelte:head>
