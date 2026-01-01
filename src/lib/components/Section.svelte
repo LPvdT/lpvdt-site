@@ -1,15 +1,15 @@
 <script lang="ts">
-  let {
-    title,
-    children,
-    class: className = "",
-    animationDelay = 0
-  }: {
-    title: string;
-    children: any;
-    class?: string;
-    animationDelay?: number;
-  } = $props();
+const {
+  title,
+  children,
+  class: className = '',
+  animationDelay = 0
+}: {
+  title: string
+  children: any
+  class?: string
+  animationDelay?: number
+} = $props()
 </script>
 
 <section

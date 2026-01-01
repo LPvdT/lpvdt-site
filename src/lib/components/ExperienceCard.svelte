@@ -1,19 +1,19 @@
 <script lang="ts">
-  let {
-    title,
-    company,
-    period,
-    description,
-    technologies = [],
-    delay = 0
-  }: {
-    title: string;
-    company: string;
-    period: string;
-    description: string;
-    technologies?: string[];
-    delay?: number;
-  } = $props();
+const {
+  title,
+  company,
+  period,
+  description,
+  technologies = [],
+  delay = 0
+}: {
+  title: string
+  company: string
+  period: string
+  description: string
+  technologies?: string[]
+  delay?: number
+} = $props()
 </script>
 
 <div

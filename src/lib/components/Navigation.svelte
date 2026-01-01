@@ -1,51 +1,51 @@
 <script lang="ts">
-  import { Sun, Moon } from "lucide-svelte";
-  import { onMount } from "svelte";
+import { Moon, Sun } from 'lucide-svelte'
+import { onMount } from 'svelte'
 
-  let {
-    isDark = $bindable(),
-    toggleTheme
-  }: { isDark: boolean; toggleTheme: () => void } = $props();
+const {
+  isDark = $bindable(),
+  toggleTheme
+}: { isDark: boolean; toggleTheme: () => void } = $props()
 
-  let isMenuOpen = $state(false);
-  let navElement: HTMLElement;
+let isMenuOpen = $state(false)
+let navElement: HTMLElement
 
-  const menuItems = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Experience", href: "#experience" },
-    { label: "Projects", href: "#projects" },
-    { label: "Education", href: "#education" }
-  ];
+const menuItems = [
+  { label: 'About', href: '#about' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Education', href: '#education' }
+]
 
-  function scrollToSection(href: string) {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      isMenuOpen = false;
-    }
+function scrollToSection(href: string) {
+  const element = document.querySelector(href)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+    isMenuOpen = false
   }
+}
 
-  function handleClickOutside(event: MouseEvent) {
-    if (navElement && !navElement.contains(event.target as Node)) {
-      isMenuOpen = false;
-    }
+function handleClickOutside(event: MouseEvent) {
+  if (navElement && !navElement.contains(event.target as Node)) {
+    isMenuOpen = false
   }
+}
 
-  function handleKeydown(event: KeyboardEvent) {
-    if (event.key === "Escape") {
-      isMenuOpen = false;
-    }
+function handleKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape') {
+    isMenuOpen = false
   }
+}
 
-  onMount(() => {
-    document.addEventListener("click", handleClickOutside);
-    document.addEventListener("keydown", handleKeydown);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-      document.removeEventListener("keydown", handleKeydown);
-    };
-  });
+onMount(() => {
+  document.addEventListener('click', handleClickOutside)
+  document.addEventListener('keydown', handleKeydown)
+  return () => {
+    document.removeEventListener('click', handleClickOutside)
+    document.removeEventListener('keydown', handleKeydown)
+  }
+})
 </script>
 
 <nav
