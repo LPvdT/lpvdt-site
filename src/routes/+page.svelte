@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Section, ExperienceCard, ScrollToTop, SkillTag, content } from "$lib";
-  import { Download, Mail, MapPin, ExternalLink, Globe } from "lucide-svelte";
+  import { Download, ExternalLink, Globe, Mail, MapPin } from "lucide-svelte";
+  import { content, ExperienceCard, ScrollToTop, Section, SkillTag } from "$lib";
 </script>
 
 <svelte:head>
@@ -10,9 +10,9 @@
 <main class="min-h-screen">
   <!-- Hero Section -->
   <section
-    class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 text-white"
+    class="relative overflow-hidden bg-linear-to-br from-indigo-600 via-purple-600 to-blue-700 text-white"
   >
-    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+    <div class="absolute inset-0 bg-linear-to-t from-black/20 to-transparent"></div>
     <div class="absolute inset-0">
       <div
         class="animate-float absolute top-10 left-10 h-2 w-2 rounded-full bg-white/20"
